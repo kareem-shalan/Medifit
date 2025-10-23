@@ -34,7 +34,7 @@ export function LatestHealthProduct() {
       {/* Latest Health Product */}
 
 
-      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 transition-all duration-300 ease-out bg-[#F2F2F2] px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8">
+      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 transition-all duration-300 ease-out bg-[#F2F2F2] px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
         {/* Section Title */}
         <motion.div
           initial={{ scale: 0 }}
@@ -260,6 +260,7 @@ export function LatestHealthProduct() {
 
         <motion.div className='md:w-1/2 w-full p-4 sm:p-6 md:p-8 lg:p-10 flex items-center'>
           <img className='w-full h-full object-cover rounded-xl sm:rounded-2xl' src="/Images/BG-Sign-Up.png" alt="BG-Sign-Up" />
+
 
         </motion.div>
 
