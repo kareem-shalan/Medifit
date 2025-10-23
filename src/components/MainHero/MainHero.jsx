@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { LuShoppingCart } from 'react-icons/lu'
-import heroImage from '../../assets/Images/HERO-Group 220.png'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react';
 export function MainHero() {
@@ -24,7 +23,7 @@ export function MainHero() {
       </motion.div>
 
       <motion.div className='w-full md:w-1/2 lg:w-auto flex justify-center items-center mt-6 md:mt-0 order-1 md:order-2'>
-        <motion.img className='w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto' src={heroImage} alt='hero-image' />
+        <motion.img className='w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto' src='/Images/HERO-Group 220.png' alt='hero-image' />
       </motion.div>
 
 

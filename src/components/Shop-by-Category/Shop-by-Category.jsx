@@ -102,7 +102,7 @@ const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
       >
         <img
           className="w-full h-auto max-h-[202px] object-contain"
-          src="../../../public/Images/realistic-hand-sanitizer-bottle-3d-style-1.png"
+          src="/Images/realistic-hand-sanitizer-bottle-3d-style-1.png"
           alt="realistic-hand-sanitizer"
         />
       </motion.div>
@@ -165,7 +165,7 @@ const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
       >
         <img
           className="w-full h-auto max-h-[202px] object-contain"
-          src="../../../public/Images/rb_2147639108-1.png"
+          src="/Images/rb_2147639108-1.png"
           alt="Face wash sale collection"
         />
       </motion.div>
@@ -228,7 +228,7 @@ const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
       >
         <img
           className="w-full h-auto max-h-[202px] object-contain"
-          src="../../../public/Images/realistic-medical-mask-with-shadows-1.png"
+          src="/Images/realistic-medical-mask-with-shadows-1.png"
           alt="realistic-medical-mask"
         />
       </motion.div>

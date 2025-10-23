@@ -330,7 +330,7 @@
             "name": "Microscope",
             "price": "$45.00 USD",
             "originalPrice": null,
-            "image": "../../../public/Images/Product-1.png",
+            "image": "/Images/Product-1.png",
             "badge": "New",
             "imageSize": "size-[100px]",
             "extraClasses": ""
@@ -340,7 +340,7 @@
             "name": "Pulse oximeter",
             "price": "$19.00 USD",
             "originalPrice": "$25.00 USD",
-            "image": "../../../public/Images/product-2png.png",
+            "image": "/Images/product-2png.png",
             "badge": "save 10%",
             "imageSize": "size-[200px]",
             "extraClasses": "mt-7"
@@ -350,7 +350,7 @@
             "name": "Vitamin serum",
             "price": "$20.00 USD",
             "originalPrice": "$30.00 USD",
-            "image": "../../../public/Images/product-3.png",
+            "image": "/Images/product-3.png",
             "badge": null,
             "imageSize": "size-[100px]",
             "extraClasses": "pb-5"
@@ -360,7 +360,7 @@
             "name": "High protein",
             "price": "$50.00 USD",
             "originalPrice": null,
-            "image": "../../../public/Images/proten.png",
+            "image": "/Images/proten.png",
             "badge": "New",
             "imageSize": "size-[100px]",
             "extraClasses": "pb-1"
@@ -372,7 +372,7 @@
           "name": "B12 Medicine",
           "price": "$45.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/B12-medicine.png",
+          "image": "/Images/B12-medicine.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": ""
@@ -382,7 +382,7 @@
           "name": "Tonometer",
           "price": "$19.00 USD",
           "originalPrice": "$25.00 USD",
-          "image": "../../../public/Images/Tonometer.png",
+          "image": "/Images/Tonometer.png",
           "badge": "save 10%",
           "imageSize": "size-[200px]",
           "extraClasses": "mt-7"
@@ -392,7 +392,7 @@
           "name": "ECG Cardiograph",
           "price": "$20.00 USD",
           "originalPrice": "$30.00 USD",
-          "image": "../../../public/Images/ECG-cardiograph.png",
+          "image": "/Images/ECG-cardiograph.png",
           "badge": null,
           "imageSize": "size-[100px]",
           "extraClasses": "pb-5"
@@ -402,7 +402,7 @@
           "name": "Blood Glucose Meter",
           "price": "$50.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/Blood-glucose-meter.png",
+          "image": "/Images/Blood-glucose-meter.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": "pb-1"
@@ -412,7 +412,7 @@
           "name": "Laboratory gloves",
           "price": "$10.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/Lab-hand-gloves.png",
+          "image": "/Images/Lab-hand-gloves.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": "pb-1"
@@ -422,7 +422,7 @@
           "name": "Stethoscope",
           "price": "$20.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/Stethoscope.png",
+          "image": "/Images/Stethoscope.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": "pb-1"
@@ -432,7 +432,7 @@
           "name": "Stethoscope",
           "price": "$34.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/Inhaler-pressure-drop.png",
+          "image": "/Images/Inhaler-pressure-drop.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": "pb-1"
@@ -442,7 +442,7 @@
           "name": "Multi vitamin",
           "price": "$15.00 USD",
           "originalPrice": null,
-          "image": "../../../public/Images/Multi-vitamin.png",
+          "image": "/Images/Multi-vitamin.png",
           "badge": "New",
           "imageSize": "size-[100px]",
           "extraClasses": "pb-1"
@@ -452,25 +452,25 @@
       "followUs": [
         {
             "id": 1,
-            "image": "../public/Images/follow1.png",
+            "image": "/Images/follow1.png",
             "name": "Follow us on Instagram"
         },
         {
             "id": 2,
-            "image": "../public/Images/follow-2.png",
+            "image": "/Images/follow-2.png",
             "name": "Follow us on Facebook",
             "link": "https://www.facebook.com/medifit" 
             
         },
         {
             "id": 3,
-            "image": "../public/Images/follow-3.png",
+            "image": "/Images/follow-3.png",
             "name": "Follow us on Twitter",
             "link": "https://www.twitter.com/medifit" 
         },
         {
             "id": 4,
-            "image": "../public/Images/follow-4.png",
+            "image": "/Images/follow-4.png",
             "name": "Follow us on LinkedIn",
             "link": "https://www.linkedin.com/company/medifit" 
         }

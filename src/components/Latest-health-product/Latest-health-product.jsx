@@ -259,7 +259,7 @@ export function LatestHealthProduct() {
       <motion.div className='bg-[#F2F2F2] flex-col  xl:flex-row md:w-full pt-8 sm:pt-10 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-10 lg:pb-12 flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 lg:px-8'>
 
         <motion.div className='md:w-1/2 w-full p-4 sm:p-6 md:p-8 lg:p-10 flex items-center'>
-          <img className='w-full h-full object-cover rounded-xl sm:rounded-2xl' src="../../../public/Images/BG-Sign-Up.png" alt="BG-Sign-Up" />
+          <img className='w-full h-full object-cover rounded-xl sm:rounded-2xl' src="/Images/BG-Sign-Up.png" alt="BG-Sign-Up" />
 
         </motion.div>
 
@@ -308,7 +308,7 @@ export function LatestHealthProduct() {
         <motion.div initial={{ scale: 0, opacity: 0, x: -100 }} animate={{ scale: 1, opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className='w-full sm:w-[500px] md:w-[600px] lg:w-[700px] xl:w-fit md:h-[280px] lg:h-[300px] xl:h-[270px] p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-20 flex items-center justify-center gap-3 sm:gap-4 bg-white rounded-xl sm:rounded-2xl m-3 sm:m-4 md:m-0 relative'>
 
           <div className='w-[30px] h-[50px] sm:w-[40px] sm:h-[70px] md:w-[50px] md:h-[90px] flex items-start justify-start absolute top-2 left-2 md:relative md:top-0 md:left-0'>
-            <img className='opacity-60 w-full h-full object-contain' src="../../../public/Images/Notes.png" alt="Notes" />
+            <img className='opacity-60 w-full h-full object-contain' src="/Images/Notes.png" alt="Notes" />
           </div>
 
           <motion.div initial={{ scale: 0, opacity: 0, x: -100, filter: "blur(100px)" }} animate={{ scale: 1, opacity: 1, x: 0, filter: "blur(0px)" }} transition={{ duration: 0.5, delay: 0.5 }} className='flex flex-col items-center justify-center gap-1 sm:gap-2 max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:w-full lg:max-w-full'>
@@ -335,28 +335,28 @@ export function LatestHealthProduct() {
               id: 1,
               name: "James Wilson",
               title: "Manager",
-              image: "../../../public/Images/Mask-group-1.png",
+              image: "/Images/Mask-group-1.png",
               delay: 0.7,
             },
             {
               id: 2,
               name: "Henry Adams",
               title: "CEO",
-              image: "../../../public/Images/Mask-group-2.png",
+              image: "/Images/Mask-group-2.png",
               delay: 0.8,
             },
             {
               id: 3,
               name: "Ethan Harris",
               title: "Business Manager",
-              image: "../../../public/Images/Mask-group-3.png",
+              image: "/Images/Mask-group-3.png",
               delay: 0.9,
             },
             {
               id: 4,
               name: "Lily Baker",
               title: "Product Manager",
-              image: "../../../public/Images/Mask-group-4.png",
+              image: "/Images/Mask-group-4.png",
               delay: 1.0,
             },
           ].map((person) => (

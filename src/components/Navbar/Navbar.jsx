@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../../assets/Images/logo 2.png';
-import Medifit from '../../assets/Images/Medifit.png';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { CiSearch } from 'react-icons/ci';
 import { LuShoppingCart } from 'react-icons/lu';
@@ -22,8 +20,8 @@ export function Navbar() {
         <div className='flex justify-between items-center w-full max-w-[1200px] px-3 sm:px-4 md:px-6 lg:px-8'>
           <div>
            <Link className='flex items-center gap-2' to='/'>
-            <img src={logo} alt='logo' />
-            <img src={Medifit} alt='logo' />
+            <img src='/Images/logo-2.png' alt='logo' />
+            <img src='/Images/Medifit.png' alt='logo' />
            </Link>
           </div>
 

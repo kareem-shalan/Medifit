@@ -69,8 +69,8 @@ export function Footer() {
 
         <div className="info flex gap-4 md:w-1/2 w-full justify-center items-center flex-col">
           <div className="logo flex gap-4 w-1/2 justify-center items-center ">
-            <img src="../../../public/Images/logo-2.png" alt="Logo" />
-            <img src="../../../public/Images/Medifit.png" alt="Logo" />
+            <img src="/Images/logo-2.png" alt="Logo" />
+            <img src="/Images/Medifit.png" alt="Logo" />
           </div>
 
           <div className="text-center text-gray-500/70 text-sm">
