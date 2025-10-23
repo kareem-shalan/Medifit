@@ -1,0 +1,479 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Medicine",
+            "image": "/Images/1-Frame-234.png",
+            "itemCount": 20,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 9,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                },
+                {
+                    "id": 10,
+                    "name": "Medicine",
+                    "image": "/Images/1-Frame-234.png"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Beauty care",
+            "image": "/Images/2-Frame-234.png",
+            "itemCount": 10,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 9,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                },
+                {
+                    "id": 10,
+                    "name": "Beauty care",
+                    "image": "/Images/2-Frame-234.png"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Personal care",
+            "image": "/Images/3-Frame-234.png",
+            "itemCount": 10,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 9,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                },
+                {
+                    "id": 10,
+                    "name": "Personal care",
+                    "image": "/Images/3-Frame-234.png"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Fitness",
+            "image": "/Images/4-Frame-234.png",
+            "itemCount": 10,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 9,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                },
+                {
+                    "id": 10,
+                    "name": "Fitness",
+                    "image": "/Images/4-Frame-234.png"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Lab equipment",
+            "image": "/Images/5-Frame-234.png",
+            "itemCount": 10,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 6,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 7,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 9,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                },
+                {
+                    "id": 10,
+                    "name": "Lab equipment",
+                    "image": "/Images/5-Frame-234.png"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Health & Wellness",
+            "image": "/Images/6-Frame-234.png",
+            "itemCount": 10,
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Health & Wellness",
+                    "image": "/Images/6-Frame-234.png"
+                },
+                {
+                    "id": 2,
+                    "name": "Health & Wellness",
+                    "image": "/Images/6-Frame-234.png"
+                },
+                {
+                    "id": 3,
+                    "name": "Health & Wellness",
+                    "image": "/Images/6-Frame-234.png"
+                },
+                {
+                    "id": 4,
+                    "name": "Health & Wellness",
+                    "image": "/Images/6-Frame-234.png"
+                },
+                {
+                    "id": 5,
+                    "name": "Health & Wellness",
+                    "image": "/Images/6-Frame-234.png"
+                }
+            ]
+        }
+    ],
+    "latestHealthProducts": [
+        {
+            "id": 1,
+            "name": "Microscope",
+            "price": "$45.00 USD",
+            "originalPrice": null,
+            "image": "../../../public/Images/Product-1.png",
+            "badge": "New",
+            "imageSize": "size-[100px]",
+            "extraClasses": ""
+        },
+        {
+            "id": 2,
+            "name": "Pulse oximeter",
+            "price": "$19.00 USD",
+            "originalPrice": "$25.00 USD",
+            "image": "../../../public/Images/product-2png.png",
+            "badge": "save 10%",
+            "imageSize": "size-[200px]",
+            "extraClasses": "mt-7"
+        },
+        {
+            "id": 3,
+            "name": "Vitamin serum",
+            "price": "$20.00 USD",
+            "originalPrice": "$30.00 USD",
+            "image": "../../../public/Images/product-3.png",
+            "badge": null,
+            "imageSize": "size-[100px]",
+            "extraClasses": "pb-5"
+        },
+        {
+            "id": 4,
+            "name": "High protein",
+            "price": "$50.00 USD",
+            "originalPrice": null,
+            "image": "../../../public/Images/proten.png",
+            "badge": "New",
+            "imageSize": "size-[100px]",
+            "extraClasses": "pb-1"
+        }
+    ],
+    "topSellingProducts" : [
+        {
+          "id": 1,
+          "name": "B12 Medicine",
+          "price": "$45.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/B12-medicine.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": ""
+        },
+        {
+          "id": 2,
+          "name": "Tonometer",
+          "price": "$19.00 USD",
+          "originalPrice": "$25.00 USD",
+          "image": "../../../public/Images/Tonometer.png",
+          "badge": "save 10%",
+          "imageSize": "size-[200px]",
+          "extraClasses": "mt-7"
+        },
+        {
+          "id": 3,
+          "name": "ECG Cardiograph",
+          "price": "$20.00 USD",
+          "originalPrice": "$30.00 USD",
+          "image": "../../../public/Images/ECG-cardiograph.png",
+          "badge": null,
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-5"
+        },
+        {
+          "id": 4,
+          "name": "Blood Glucose Meter",
+          "price": "$50.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/Blood-glucose-meter.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 5,
+          "name": "Laboratory gloves",
+          "price": "$10.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/Lab-hand-gloves.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 6,
+          "name": "Stethoscope",
+          "price": "$20.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/Stethoscope.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 7,
+          "name": "Stethoscope",
+          "price": "$34.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/Inhaler-pressure-drop.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 8,
+          "name": "Multi vitamin",
+          "price": "$15.00 USD",
+          "originalPrice": null,
+          "image": "../../../public/Images/Multi-vitamin.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        }
+    
+      ],
+      "followUs": [
+        {
+            "id": 1,
+            "image": "../public/Images/follow1.png",
+            "name": "Follow us on Instagram"
+        },
+        {
+            "id": 2,
+            "image": "../public/Images/follow-2.png",
+            "name": "Follow us on Facebook",
+            "link": "https://www.facebook.com/medifit" 
+            
+        },
+        {
+            "id": 3,
+            "image": "../public/Images/follow-3.png",
+            "name": "Follow us on Twitter",
+            "link": "https://www.twitter.com/medifit" 
+        },
+        {
+            "id": 4,
+            "image": "../public/Images/follow-4.png",
+            "name": "Follow us on LinkedIn",
+            "link": "https://www.linkedin.com/company/medifit" 
+        }
+    ]
+      
+}

@@ -1,0 +1,14 @@
+{
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/shop",
+            "destination": "/shop.html"
+        }
+    ]
+}
