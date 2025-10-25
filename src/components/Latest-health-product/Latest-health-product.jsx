@@ -17,17 +17,18 @@ export function LatestHealthProduct() {
 
   const [LinkActive, setLinkActive] = useState(null)
 
-  const handleLinkActive = (index) => {
-    console.log(index)
-    setLinkActive(index)
-  }
+
+
+
 
 
   useEffect(() => {
     setlatestHealthProducts(data.latestHealthProducts);
     settopSellingProducts(data.topSellingProducts);
     setfollowUs(data.followUs);
-    
+
+    setLinkActive(null);
+
   }, [data.latestHealthProducts, data.topSellingProducts, data.followUs])
 
     ;
@@ -60,12 +61,18 @@ export function LatestHealthProduct() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 justify-center items-center mt-6">
           {latestHealthProducts.map((product, index) => (
             <motion.div
-              onClick={() => handleLinkActive(index)}
+
               key={product.id}
+              onClick={() =>
+                setLinkActive(LinkActive === index ? null : index) // ✅ toggle
+              }
+              onTouchStart={() =>
+                setLinkActive(LinkActive === index ? null : index) // ✅ يشتغل باللمس
+              }
               initial={{ scale: 0, opacity: 0, x: -100 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden touch-manipulation group"
+              className="group h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden touch-manipulation"
             >
               {/* Image + Badge */}
               <div className="w-1/2 relative mb-[15px]">
@@ -85,31 +92,18 @@ export function LatestHealthProduct() {
               </div>
 
               {/* Hover Button */}
-
               <Link
                 to="/shop"
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
-                absolute bottom-[-100%] left-0
-                group-hover:bottom-0
-                group-active:bottom-0
-                ${LinkActive === index ? "bottom-0 z-50" : "bottom-[-100%]"}
-                group-active:bg-[#D3744A]/80
-                 transition-all duration-300 ease-out ${LinkActive === index ? "bg-[#D3744A]/80" : "bg-[#D3744A]"}`}
+                className={`absolute left-0 w-full h-[40px] flex items-center justify-center gap-2 rounded-md text-white p-2 bg-[#D3744A] transition-all duration-300 ease-out
+             ${LinkActive === index ? "bottom-0 z-50 bg-[#D3744A]/80 text-black shadow-lg shadow-black/20     group-hover:bottom-0 group-hover:bg-[#D3744A]/80 group-hover:text-black group-hover:shadow-lg group-hover:shadow-black/20  " : "bottom-[-100%]"}
+            `}
               >
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
               </Link>
 
-
-
-
-
-
               {/* Product Info */}
-              <div className={`w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center ${product.extraClasses}`}>
+              <div className="w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center">
                 <div className="w-full max-w-[200px] sm:max-w-[220px] h-auto mx-2 mb-8 sm:mb-10 md:mb-12">
                   <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#503217]">
                     {product.name}
@@ -131,6 +125,7 @@ export function LatestHealthProduct() {
                 </div>
               </div>
             </motion.div>
+
           ))}
         </div>
       </motion.div>
@@ -214,20 +209,23 @@ export function LatestHealthProduct() {
         {/* Product Cards */}
         {topSellingProducts.map((product, index) => (
           <motion.div
-            onClick={() => handleLinkActive(index)}
             key={product.id}
             initial={{ scale: 0, opacity: 0, x: -100 }}
             animate={{ scale: 1, opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px] h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden group touch-manipulation"
+            onClick={() =>
+              setLinkActive(LinkActive === index ? null : index) // ✅ toggle
+            }
+            onTouchStart={() =>
+              setLinkActive(LinkActive === index ? null : index) // ✅ يشتغل باللمس
+            }
+            className="group w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px]
+         h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px]
+         flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center
+         p-2 bg-white rounded-3xl relative overflow-hidden touch-manipulation"
           >
             {/* Image + Badge */}
-            <motion.div
-              initial={{ scale: 0, opacity: 0, x: -100 }}
-              animate={{ scale: 1, opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="w-1/2 relative mb-[15px] h-full flex items-center justify-center"
-            >
+            <div className="w-1/2 relative mb-[15px] h-full flex items-center justify-center">
               <div className="w-full flex items-center justify-center object-cover relative">
                 <img
                   className={`${product.imageSize} h-fit object-center z-10 transition-all duration-300 ease-out`}
@@ -241,30 +239,21 @@ export function LatestHealthProduct() {
                   <p className="text-sm">{product.badge}</p>
                 </div>
               )}
-            </motion.div>
+            </div>
 
-            {/* Hover Button */}
-
-
+            {/* Button */}
             <Link
               to="/shop"
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
-                absolute bottom-[-100%] left-0
-                group-hover:bottom-0
-                group-active:bottom-0
-                ${LinkActive === index ? "bottom-0 z-50" : "bottom-[-100%]"}
-                group-active:bg-[#D3744A]/80
-                 transition-all duration-300 ease-out ${LinkActive === index ? "bg-[#D3744A]/80" : "bg-[#D3744A]"}`}
+              className={`absolute left-0 w-full h-[40px] flex items-center justify-center gap-2 rounded-md text-white p-2 bg-[#D3744A] transition-all duration-300 ease-out
+             ${LinkActive === index ? "bottom-0 z-50 bg-[#D3744A]/80 text-black shadow-lg shadow-black/20     group-hover:bottom-0 group-hover:bg-[#D3744A]/80 group-hover:text-black group-hover:shadow-lg group-hover:shadow-black/20  " : "bottom-[-100%]"}
+            `}
             >
               <BsEyeFill className="text-2xl" />
               <p className="text-sm">View</p>
             </Link>
 
             {/* Product Info */}
-            <motion.div className={`w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center ${product.extraClasses}`}>
+            <div className={`w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center ${product.extraClasses}`}>
               <div className="w-full max-w-[200px] sm:max-w-[220px] h-auto mx-2 mb-8 sm:mb-10 md:mb-12">
                 <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold whitespace-nowrap text-[#503217]">
                   {product.name}
@@ -284,8 +273,9 @@ export function LatestHealthProduct() {
                   </p>
                 )}
               </div>
-            </motion.div>
+            </div>
           </motion.div>
+
         ))}
       </motion.div>
 
