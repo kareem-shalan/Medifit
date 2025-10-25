@@ -80,11 +80,11 @@ export function Footer() {
           </div>
 
           <div className="icons flex gap-4 w-1/2 justify-center items-center ">
-            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white'><FaFacebookF className='text-xl p-1 bg' /></Link>
-            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white'><FaTwitter className='text-xl p-1' /></Link>
-            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white'><FaInstagram className='text-xl p-1' /></Link>
-            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white'><FaLinkedin className='text-xl p-1' /></Link>
-            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white'><FaYoutube className='text-xl p-1' /></Link>
+            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'><FaFacebookF className='text-xl p-1 bg' /></Link>
+            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'><FaTwitter className='text-xl p-1' /></Link>
+            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'><FaInstagram className='text-xl p-1' /></Link>
+            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'><FaLinkedin className='text-xl p-1' /></Link>
+            <Link to='/' target='_blank' className='bg-[#503217] rounded-md flex justify-center items-center text-white hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'><FaYoutube className='text-xl p-1' /></Link>
 
           </div>
 

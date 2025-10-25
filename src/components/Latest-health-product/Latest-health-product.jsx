@@ -79,7 +79,7 @@ export function LatestHealthProduct() {
               {/* Hover Button */}
               <Link
                 to="/shop"
-                className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 group-active:bg-[#D3744A]/80 group-active:text-black group-active:shadow-lg group-active:shadow-black/20 transition-all duration-300 ease-out"
+                className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 group-active:bg-[#D3744A]/80 group-active:text-black group-active:shadow-lg group-active:shadow-black/20 transition-all duration-300 ease-out "
               >
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
@@ -285,7 +285,7 @@ export function LatestHealthProduct() {
               >Enter your email
               </label>
             </div>
-            <motion.button className='w-full sm:w-[149px] h-[44px] sm:h-[48px] bg-[#503217] text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-medium hover:bg-[#503217]/90 transition-all'>
+            <motion.button className='w-full sm:w-[149px] h-[44px] sm:h-[48px] bg-[#503217] text-white rounded-lg sm:rounded-xl text-sm sm:text-base font-medium hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all'>
               <Link to='/shop'>Shop Now</Link>
             </motion.button>
           </motion.div>

@@ -31,7 +31,7 @@ export function Navbar() {
                 <NavLink
                   to='/home'
                   className={({ isActive }) =>
-                    `font-medium text-lg hover:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
+                    `font-medium text-lg hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full active:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
                   }
                 >
                   Home
@@ -39,14 +39,14 @@ export function Navbar() {
               </li>
               <li>
                 <NavLink  className={({ isActive }) =>
-                    `font-medium text-lg hover:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
+                    `font-medium text-lg hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full active:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
                   }
                    to='/shop'>Shop</NavLink>
               </li>
               <li>
                 <select
                   defaultValue="pages"
-                  className="bg-white border-2 border-[#503217] rounded-lg px-4 py-2 text-[#503217] font-medium cursor-pointer hover:border-[#8B5A3C] hover:text-[#8B5A3C] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#8B5A3C]"
+                  className="bg-white border-2 border-[#503217] rounded-lg px-4 py-2 text-[#503217] font-medium cursor-pointer hover:border-[#8B5A3C] hover:text-[#8B5A3C] active:border-[#8B5A3C] active:text-[#8B5A3C] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#8B5A3C]"
                   onChange={(e) => {
                     const value = e.target.value;
                     if (value !== 'pages') navigate(value);
@@ -61,25 +61,25 @@ export function Navbar() {
               </li>
               <li>
                 <NavLink  className={({ isActive }) =>
-                    `font-medium text-lg hover:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
+                    `font-medium text-lg hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full active:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
                   } to='/about'>About</NavLink>
               </li>
               <li>
                 <NavLink  className={({ isActive }) =>
-                    `font-medium text-lg hover:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
+                    `font-medium text-lg hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#8B5A3C] after:transition-all after:duration-300 hover:after:w-full active:after:w-full ${isActive ? 'text-[#8B5A3C] after:w-full' : ''}`
                   } to='/contact'>Contact</NavLink>
               </li>
             </ul>
           </div>
 
           <div className='text-xl sm:text-2xl flex items-center justify-around gap-3 sm:gap-4'>
-            <CiSearch className='cursor-pointer hover:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 transform' />
-            <LuShoppingCart className='cursor-pointer hover:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 transform' />
+            <CiSearch className='cursor-pointer hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 active:scale-110 transform' />
+            <LuShoppingCart className='cursor-pointer hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 active:scale-110 transform' />
           </div>
 
           <div className='z-50 md:hidden'>
             <IoMenu
-              className={`text-3xl cursor-pointer transition-transform duration-300 hover:scale-110 ${showMenu ? 'rotate-90' : ''}`}
+              className={`text-3xl cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-110 ${showMenu ? 'rotate-90' : ''}`}
               onClick={() => setShowMenu(!showMenu)}
             />
           </div>
