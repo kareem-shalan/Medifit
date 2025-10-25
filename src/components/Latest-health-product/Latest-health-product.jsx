@@ -79,7 +79,7 @@ export function LatestHealthProduct() {
               {/* Hover Button */}
               <Link
                 to="/shop"
-                className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d hover:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 transition-all duration-300 ease-out"
+                className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 group-active:bg-[#D3744A]/80 group-active:text-black group-active:shadow-lg group-active:shadow-black/20 transition-all duration-300 ease-out"
               >
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
@@ -222,7 +222,7 @@ export function LatestHealthProduct() {
             {/* Hover Button */}
             <Link
               to="/shop"
-              className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d hover:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 transition-all duration-300 ease-out"
+              className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 group-active:bg-[#D3744A]/80 group-active:text-black group-active:shadow-lg group-active:shadow-black/20 transition-all duration-300 ease-out"
             >
               <BsEyeFill className="text-2xl" />
               <p className="text-sm">View</p>
@@ -427,11 +427,17 @@ export function LatestHealthProduct() {
 
               {/* Hover Overlay */}
               <motion.div
-                className={`absolute top-0 left-[100px] w-full h-full group-hover:bg-white/30 justify-center items-center hidden group-hover:flex duration-300 ease-out transition-all  group-hover:left-0 overflow-hidden
+                className={`absolute top-0 left-[100px] w-full h-full
+                   group-hover:bg-white/30  group-active:bg-white/30   
                   
-            ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl" : ""}
-            ${item.id === 3 ? "rounded-full group-hover:rounded-full" : ""}
-            ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl" : ""}
+                  
+                  justify-center items-center hidden group-hover:flex  group-active:flex 
+                  
+                  duration-300 ease-out transition-all  group-hover:left-0      group-active:left-0 overflow-hidden
+                  
+            ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
+            ${item.id === 3 ? "rounded-full group-hover:rounded-full group-active:rounded-full" : ""}
+            ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
             
           `}
               >
