@@ -84,8 +84,8 @@ export function LatestHealthProduct() {
               {/* Hover Button */}
               <Link
                 to="/shop"
-                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute md:bottom-[-100%] bottom-0 left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-                ${activeIndex === index ? "bottom-0" : "md:bottom-[-100%]"}`}
+                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
+                ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
                 onMouseEnter={() => toggleActive(index)}
                 onMouseLeave={() => toggleActive(null)}
                 onTouchStart={() => toggleActive(index)}
@@ -232,8 +232,8 @@ export function LatestHealthProduct() {
             {/* Hover Button */}
             <Link
               to="/shop"
-              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute md:bottom-[-100%] bottom-0 left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-              ${activeIndex === index ? "bottom-0" : "md:bottom-[-100%]"}`}
+              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
+              ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
               onMouseEnter={() => toggleActive(index)}
               onMouseLeave={() => toggleActive(null)}
               onTouchStart={() => toggleActive(index)}
