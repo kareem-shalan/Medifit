@@ -85,9 +85,11 @@ export function LatestHealthProduct() {
               <Link
                 to="/shop"
                 className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute md:bottom-[-100%] bottom-0 left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-                ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
+                ${activeIndex === index ? "bottom-0" : "md:bottom-[-100%]"}`}
                 onMouseEnter={() => toggleActive(index)}
                 onMouseLeave={() => toggleActive(null)}
+                onTouchStart={() => toggleActive(index)}
+                onTouchEnd={() => toggleActive(null)}
               >
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
@@ -231,9 +233,11 @@ export function LatestHealthProduct() {
             <Link
               to="/shop"
               className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute md:bottom-[-100%] bottom-0 left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-              ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
+              ${activeIndex === index ? "bottom-0" : "md:bottom-[-100%]"}`}
               onMouseEnter={() => toggleActive(index)}
               onMouseLeave={() => toggleActive(null)}
+              onTouchStart={() => toggleActive(index)}
+              onTouchEnd={() => toggleActive(null)}
             >
               <BsEyeFill className="text-2xl" />
               <p className="text-sm">View</p>
@@ -422,9 +426,11 @@ export function LatestHealthProduct() {
           {followUs.map((item) => (
             <motion.div
               key={item.id}
-              className="relative w-full items-center group "
+              className="relative w-full items-center group touch-manipulation"
               onMouseEnter={() => toggleActive(item.id)}
               onMouseLeave={() => toggleActive(null)}
+              onTouchStart={() => toggleActive(item.id)}
+              onTouchEnd={() => toggleActive(null)}
             >
               {/* Image */}
               <motion.img
@@ -440,18 +446,18 @@ export function LatestHealthProduct() {
 
               {/* Hover Overlay */}
               <motion.div
-                className={`absolute top-0 left-[100px] w-full h-full
+                className={`absolute top-0 w-full h-full
                    group-hover:bg-white/30  group-active:bg-white/30   
                   
                   
                   justify-center items-center hidden group-hover:flex  group-active:flex 
                   
-                  duration-300 ease-out transition-all  group-hover:left-0      group-active:left-0 overflow-hidden
+                  duration-300 ease-out transition-all overflow-hidden
                   
             ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
             ${item.id === 3 ? "rounded-full group-hover:rounded-full group-active:rounded-full" : ""}
             ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
-            ${activeIndex === item.id ? "left-0" : "left-[100px]"}
+            ${activeIndex === item.id ? "left-0 flex bg-white/30" : "left-[100px]"}
           `}
               >
                 <p className="text-[#503217] shadow-2xs flex items-center justify-center gap-2 flex-col text-xl font-bold">
