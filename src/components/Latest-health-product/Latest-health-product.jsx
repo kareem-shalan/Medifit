@@ -17,15 +17,18 @@ export function LatestHealthProduct() {
 
   const [LinkActive, setLinkActive] = useState(null)
 
-
+  const handleLinkActive = (index) => {
+    console.log(index)
+    setLinkActive(index)
+  }
 
 
   useEffect(() => {
     setlatestHealthProducts(data.latestHealthProducts);
     settopSellingProducts(data.topSellingProducts);
     setfollowUs(data.followUs);
-    setLinkActive(null)
-  }, [data.latestHealthProducts, data.topSellingProducts, LinkActive, data.followUs])
+    
+  }, [data.latestHealthProducts, data.topSellingProducts, , data.followUs])
 
     ;
 
@@ -57,7 +60,7 @@ export function LatestHealthProduct() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 justify-center items-center mt-6">
           {latestHealthProducts.map((product, index) => (
             <motion.div
-              onClick={() => setLinkActive(index)}
+              onClick={() => handleLinkActive(index)}
               key={product.id}
               initial={{ scale: 0, opacity: 0, x: -100 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
@@ -209,7 +212,7 @@ export function LatestHealthProduct() {
         {/* Product Cards */}
         {topSellingProducts.map((product, index) => (
           <motion.div
-          onClick={() => setLinkActive(index)}
+            onClick={() => handleLinkActive(index)}
             key={product.id}
             initial={{ scale: 0, opacity: 0, x: -100 }}
             animate={{ scale: 1, opacity: 1, x: 0 }}
@@ -242,19 +245,19 @@ export function LatestHealthProduct() {
 
 
             <Link
-                to="/shop"
+              to="/shop"
 
-                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
+              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
                 absolute bottom-[-100%] left-0
                 group-hover:bottom-0
                 group-active:bottom-0
                 ${LinkActive === index ? "bottom-0" : "bottom-[-100%]"}
                 group-active:bg-[#D3744A]/80
                  transition-all duration-300 ease-out ${LinkActive === index ? "bg-[#D3744A]/80" : "bg-[#D3744A]"}`}
-              >
-                <BsEyeFill className="text-2xl" />
-                <p className="text-sm">View</p>
-              </Link>
+            >
+              <BsEyeFill className="text-2xl" />
+              <p className="text-sm">View</p>
+            </Link>
 
             {/* Product Info */}
             <motion.div className={`w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center ${product.extraClasses}`}>
