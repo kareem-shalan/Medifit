@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <>
 
-      <motion.div className='w-full bg-[#E8E6DE] flex gap-4  md:flex-row flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12 overflow-hidden'>
+      <motion.div className='w-full bg-[#E8E6DE] flex gap-4  md:flex-row flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12 overflow-hidden  '>
 
 
         <div className="links flex gap-4 md:w-1/2 w-full justify-center items-center" >

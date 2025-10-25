@@ -16,14 +16,14 @@ export function ShopByCategory() {
 
   return (
     <>
-      <motion.div className='md:w-full md:h-fit w-full mt-10 bg-white text-center'>
+      <motion.div className='md:w-full md:h-fit w-full mt-10  text-center container '>
         <motion.h2 initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} className='text-2xl text-[#503217] font-bold'>Shop By Category</motion.h2>
 
-        <motion.div className='w-full flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-10 px-2 sm:px-3 md:px-4 lg:px-6'>
+        <motion.div className='w-full flex flex-wrap lg:flex-nowrap whitespace-nowrap justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-6 sm:mt-8 md:mt-10 px-2 sm:px-3 md:px-4 lg:px-6'>
           {AllData.map((category) => (
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} key={category.id} className='w-[calc(50%-0.5rem)] sm:w-[calc(50%-0.75rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[191px] h-[220px] sm:h-[242px] transition-all duration-300 flex justify-center items-center'>
               <div className='w-full max-w-[115px] h-[195px] flex flex-col p-2 sm:p-3 md:p-5 justify-start items-center gap-2'>
-                <div className='w-[90px] h-[90px] sm:w-[115px] sm:h-[115px] object-cover'>
+                <div className='w-[90px] h-[90px]  object-cover'>
                   <motion.img style={{ rotate }} className='w-full h-full cursor-pointer object-cover' src={category.image} alt={category.name} />
                 </div>
                 <div className='w-full max-w-[139px] h-auto flex flex-col items-center justify-center'>

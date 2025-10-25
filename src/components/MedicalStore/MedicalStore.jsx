@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import { ShopByCategory, MainHero, LatestHealthProduct } from "../index.js";
 

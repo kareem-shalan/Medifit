@@ -42,7 +42,10 @@ export function LatestHealthProduct() {
       {/* Latest Health Product */}
 
 
-      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 transition-all duration-300 ease-out bg-[#F2F2F2] px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8 py-6 sm:py-8 md:py-10 lg:py-12">
+      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 transition-all duration-300 ease-out  px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8 py-6 sm:py-8 md:py-10 lg:py-12
+      
+      container mx-auto
+      ">
         {/* Section Title */}
         <motion.div
           initial={{ scale: 0 }}
@@ -66,7 +69,7 @@ export function LatestHealthProduct() {
               onClick={() =>
                 setLinkActive(LinkActive === index ? null : index) // ✅ toggle
               }
-            
+
               initial={{ scale: 0, opacity: 0, x: -100 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -134,7 +137,7 @@ export function LatestHealthProduct() {
       {/* Why Choose Us */}
 
 
-      <motion.div className="w-full  mx-auto px-4 md:px-6 lg:px-8 py-10 bg-[#F2F2F2] flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-6">
+      <motion.div className="w-full  mx-auto px-4 md:px-6 lg:px-8 py-10  flex flex-col md:flex-row md:flex-wrap justify-center items-start gap-6">
         {[
           {
             icon: <BiCheckCircle className="text-3xl text-green-500" />,
@@ -160,7 +163,10 @@ export function LatestHealthProduct() {
             initial={{ scale: 0, opacity: 0, x: -100 }}
             animate={{ scale: 1, opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: card.delay }}
-            className="w-full md:w-1/2 lg:w-[360px] min-h-[140px] bg-white rounded-3xl p-5 flex items-center gap-5 shadow-sm"
+            className="w-full md:w-1/2 lg:w-[360px] min-h-[140px] bg-white rounded-3xl p-5 flex items-center gap-5 shadow-sm
+            container mx-auto
+            
+            "
           >
             {/* Icon */}
             <div className="w-[70px] h-[70px] bg-[#EBE9E0] rounded-2xl flex items-center justify-center rotate-45 flex-shrink-0">
@@ -189,7 +195,11 @@ export function LatestHealthProduct() {
 
 
 
-      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex flex-wrap justify-center items-center transition-all duration-300 ease-out bg-[#F2F2F2] gap-3 sm:gap-4 md:gap-5 lg:gap-6 relative px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8">
+      <motion.div className="w-full mt-6 sm:mt-8 md:mt-10 lg:mt-12 flex flex-wrap justify-center items-center transition-all duration-300 ease-out  gap-3 sm:gap-4 md:gap-5 lg:gap-6 relative px-2 sm:px-3 md:px-4 lg:px-6 2xl:px-8
+      
+      
+      container mx-auto
+      ">
         {/* Section Title */}
         <motion.div
           initial={{ scale: 0, opacity: 0, x: -100 }}
@@ -214,7 +224,7 @@ export function LatestHealthProduct() {
             onClick={() =>
               setLinkActive(LinkActive === index ? null : index) // ✅ toggle
             }
-          
+
             className="group w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px]
          h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px]
          flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center
@@ -277,7 +287,10 @@ export function LatestHealthProduct() {
 
       {/* Sign Up for an Instant 15% Discount */}
 
-      <motion.div className='bg-[#F2F2F2] flex-col  xl:flex-row md:w-full pt-8 sm:pt-10 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-10 lg:pb-12 flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 lg:px-8'>
+      <motion.div className=' flex-col  xl:flex-row md:w-full pt-8 sm:pt-10 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-10 lg:pb-12 flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 lg:px-8
+      
+      container mx-auto
+      '>
 
         <motion.div className='md:w-1/2 w-full p-4 sm:p-6 md:p-8 lg:p-10 flex items-center'>
           <img className='w-full h-full object-cover rounded-xl sm:rounded-2xl' src="/Images/BG-Sign-Up.png" alt="BG-Sign-Up" />
@@ -318,7 +331,10 @@ export function LatestHealthProduct() {
 
 
       {/*    Our happy clients      */}
-      <motion.div className='w-full bg-[#EEEDE7] flex flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12'>
+      <motion.div className='w-full bg-[#EEEDE7] flex flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12
+      
+      container mx-auto
+      '>
 
         <motion.div initial={{ scale: 0, opacity: 0, x: -100 }} animate={{ scale: 1, opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className='w-full text-[#503217] flex justify-center items-center mt-4 sm:mt-6 md:mt-8 lg:mt-10'>
           <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-2 sm:py-3 md:py-4 lg:py-5 mb-2 sm:mb-3 md:mb-4 lg:mb-5 font-bold'>
@@ -415,7 +431,12 @@ export function LatestHealthProduct() {
 
       {/*Follow us @medifit  */}
 
-      <motion.div className="w-full bg-[#F2F2F2] flex flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12">
+      <motion.div className="w-full  flex flex-col justify-center items-center py-6 px-3 sm:px-6 md:px-12 lg:px-24 sm:py-8 md:py-10 lg:py-12
+      
+      container mx-auto
+      ">
+
+
         {/* Title */}
         <motion.div
           initial={{ scale: 0, opacity: 0, x: -100 }}
@@ -431,6 +452,13 @@ export function LatestHealthProduct() {
         <motion.div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
           {followUs.map((item) => (
             <motion.div
+              onClick={() => {
+                if (LinkActive === item.id) {
+                  setLinkActive(null);
+                } else {
+                  setLinkActive(item.id);
+                }
+              }}
               key={item.id}
               className="relative w-full items-center group touch-manipulation"
             >
@@ -448,10 +476,17 @@ export function LatestHealthProduct() {
 
               {/* Hover Overlay */}
               <motion.div
-                className={`absolute top-0 left-[100%] w-full h-full bg-white/30 justify-center items-center hidden group-hover:flex group-active:flex duration-300 ease-out transition-all overflow-hidden group-hover:left-0 group-active:left-0
+                className={`
+                 overflow-hidden
+               
+
+                  ${LinkActive === item.id ? ` absolute  top-0 left-0 w-full h-full bg-white/30 justify-center items-center flex group-hover:flex group-active:flex duration-300 ease-out transition-all overflow-hidden group-hover:translate-x-0 group-active:translate-x-0
             ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl" : ""}
             ${item.id === 3 ? "rounded-full group-hover:rounded-full" : ""}
             ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl" : ""}
+                    
+                    
+                    ` : "translate-x-[-100%] hidden duration-300 ease-out transition-all overflow-hidden group-hover:translate-x-0 group-active:translate-x-0 "}
           `}
               >
                 <p className="text-[#503217] shadow-2xs flex items-center justify-center gap-2 flex-col text-xl font-bold">
