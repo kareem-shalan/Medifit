@@ -62,7 +62,9 @@ export function LatestHealthProduct() {
               initial={{ scale: 0, opacity: 0, x: -100 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden group touch-manipulation"
+              className="h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden  touch-manipulation 
+              group
+              "
             >
               {/* Image + Badge */}
               <div className="w-1/2 relative mb-[15px]">
@@ -85,11 +87,11 @@ export function LatestHealthProduct() {
               <Link
                 to="/shop"
                 className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-                ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
-                onMouseEnter={() => toggleActive(index)}
-                onMouseLeave={() => toggleActive(null)}
-                onTouchStart={() => toggleActive(index)}
-                onTouchEnd={() => toggleActive(null)}
+                "}
+                                absolute top-[100%] bottom-0 left-0 w-full translate-y-full group-hover:translate-y-[-100%] transition-transform duration-300 ease-out
+                `}
+
+
               >
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
@@ -205,7 +207,12 @@ export function LatestHealthProduct() {
             initial={{ scale: 0, opacity: 0, x: -100 }}
             animate={{ scale: 1, opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px] h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden group touch-manipulation"
+            className="w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px] h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden group touch-manipulation
+            group
+            "
+            onclick={() => {
+              toggleActive(index);
+            }}
           >
             {/* Image + Badge */}
             <motion.div
@@ -232,12 +239,11 @@ export function LatestHealthProduct() {
             {/* Hover Button */}
             <Link
               to="/shop"
-              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 absolute bottom-[-100%] left-0 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
-              ${activeIndex === index ? "bottom-0" : "bottom-[-100%]"}`}
-              onMouseEnter={() => toggleActive(index)}
-              onMouseLeave={() => toggleActive(null)}
-              onTouchStart={() => toggleActive(index)}
-              onTouchEnd={() => toggleActive(null)}
+              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 group-active:scale-105 cursor-pointer transform-cpu hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20 md:hover:bottom-0 group-hover:bottom-0 group-active:bottom-0 active:bottom-0 group-active:bg-[#D3744A]/80 active:bg-[#D3744A]/80 group-active:text-black active:text-black group-active:shadow-lg active:shadow-lg group-active:shadow-black/20 active:shadow-black/20 transition-all duration-300 ease-out 
+              absolute top-[100%] bottom-0 left-0  translate-y-full group-hover:translate-y-[-100%] 
+              
+              `}
+
             >
               <BsEyeFill className="text-2xl" />
               <p className="text-sm">View</p>
@@ -454,10 +460,10 @@ export function LatestHealthProduct() {
                   
                   duration-300 ease-out transition-all overflow-hidden
                   
-            ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
-            ${item.id === 3 ? "rounded-full group-hover:rounded-full group-active:rounded-full" : ""}
-            ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl group-active:rounded-t-4xl" : ""}
-            ${activeIndex === item.id ? "left-0 flex bg-white/30" : "left-[100px]"}
+            ${item.id === 4 ? "rounded-t-full group-hover:rounded-t-4xl translate-x-0 group-active:rounded-t-4xl" : ""}
+            ${item.id === 3 ? "rounded-full group-hover:rounded-full translate-x-0 group-active:rounded-full" : ""}
+            ${item.id === 2 ? "rounded-t-4xl group-hover:rounded-t-4xl translate-x-0 translate-y-0 group-active:rounded-t-4xl" : ""}
+        "}
           `}
               >
                 <p className="text-[#503217] shadow-2xs flex items-center justify-center gap-2 flex-col text-xl font-bold">

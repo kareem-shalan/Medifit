@@ -16,7 +16,7 @@ export function MainHero() {
           For the best results, align your health needs with your medication plan.
         </motion.p>
 
-        <motion.button initial={{y: -100, opacity: 0 , scale: 0 }} animate={{ y: 0, opacity: 1 , scale: 1 }} transition={{ duration: 0.5 , delay: 0.5 }} className='flex items-center justify-center gap-2 w-[140px] sm:w-[158px] h-[44px] sm:h-[48px] bg-[#503217] text-white rounded-md hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300'>
+        <motion.button initial={{y: -100, scale: 0 , filter: "blur(100px)"}} animate={{ y: 0, scale: 1 , filter: "blur(0px)" }} transition={{ duration: 0.5 , delay: 0.5 , ease: "easeInOut" }} className='flex items-center justify-center gap-2 w-[140px] sm:w-[158px] h-[44px] sm:h-[48px] bg-[#503217] text-white rounded-md hover:bg-[#503217]/90 active:bg-[#503217]/90 transition-all duration-300 p-2'>
           <LuShoppingCart className='text-lg sm:text-xl' />
           <Link to='/shop' className='text-sm sm:text-base font-medium'>Shop Now</Link>
         </motion.button>
