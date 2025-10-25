@@ -7,10 +7,13 @@ import { motion, useTime, useTransform } from 'motion/react';
 
 export function ShopByCategory() {
   const [AllData, setAllData] = useState([])
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const time = useTime();
-const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
-
+  const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
+  const toggleActive = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   useEffect(() => {
     setAllData(data.categories);
   }, [data.categories])
@@ -39,206 +42,212 @@ const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
 
 
       <motion.div
-  className="w-full max-w-screen-xl mx-auto mt-6 sm:mt-8 md:mt-10 px-2 sm:px-3 md:px-4 lg:px-6"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.5 }}
->
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-    {/* Card 1 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
-    >
-      <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
-        >
-          Sanitizer
-        </motion.button>
-
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full mb-3 sm:mb-4"
-        >
-          <motion.h2
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
-          >
-            Hand sanitizer collection
-          </motion.h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full"
-        >
-          <Link
-            className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
-            to="/shop"
-          >
-            <BiShoppingBag className="text-lg sm:text-xl" />
-            Shop Now
-          </Link>
-        </motion.div>
-      </div>
-
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        className="w-full max-w-screen-xl mx-auto mt-6 sm:mt-8 md:mt-10 px-2 sm:px-3 md:px-4 lg:px-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-[163px] flex justify-center items-center"
       >
-        <img
-          className="w-full h-auto max-h-[202px] object-contain"
-          src="/Images/realistic-hand-sanitizer-bottle-3d-style-1.png"
-          alt="realistic-hand-sanitizer"
-        />
-      </motion.div>
-    </motion.div>
-
-    {/* Card 2 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-      className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
-    >
-      <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
-        >
-          Sanitizer
-        </motion.button>
-
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full mb-3 sm:mb-4"
-        >
-          <motion.h2
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          {/* Card 1 */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
+            className={`flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out ${activeIndex === 0 ? "shadow-2xl shadow-black/20" : ""}`}
+            onMouseEnter={() => toggleActive(0)}
+            onMouseLeave={() => toggleActive(null)}
           >
-            Face wash sale collection
-          </motion.h2>
-        </motion.div>
+            <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
+              <motion.button
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
+              >
+                Sanitizer
+              </motion.button>
 
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full"
-        >
-          <Link
-            className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
-            to="/shop"
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full mb-3 sm:mb-4"
+              >
+                <motion.h2
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
+                >
+                  Hand sanitizer collection
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
+              >
+                <Link
+                  className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
+                  to="/shop"
+                >
+                  <BiShoppingBag className="text-lg sm:text-xl" />
+                  Shop Now
+                </Link>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full max-w-[163px] flex justify-center items-center"
+            >
+              <img
+                className="w-full h-auto max-h-[202px] object-contain"
+                src="/Images/realistic-hand-sanitizer-bottle-3d-style-1.png"
+                alt="realistic-hand-sanitizer"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Card 2 */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className={`flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 ease-out ${activeIndex === 1 ? "shadow-2xl shadow-black/20" : ""}`}
+            onMouseEnter={() => toggleActive(1)}
+            onMouseLeave={() => toggleActive(null)}
           >
-            <BsEyeFill className="text-lg sm:text-xl" />
-            Discover now
-          </Link>
-        </motion.div>
-      </div>
+            <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
+              <motion.button
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
+              >
+                Sanitizer
+              </motion.button>
 
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-[163px] flex justify-center items-center"
-      >
-        <img
-          className="w-full h-auto max-h-[202px] object-contain"
-          src="/Images/rb_2147639108-1.png"
-          alt="Face wash sale collection"
-        />
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full mb-3 sm:mb-4"
+              >
+                <motion.h2
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
+                >
+                  Face wash sale collection
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
+              >
+                <Link
+                  className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
+                  to="/shop"
+                >
+                  <BsEyeFill className="text-lg sm:text-xl" />
+                  Discover now
+                </Link>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full max-w-[163px] flex justify-center items-center"
+            >
+              <img
+                className="w-full h-auto max-h-[202px] object-contain"
+                src="/Images/rb_2147639108-1.png"
+                alt="Face wash sale collection"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className={`flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 ease-out ${activeIndex === 2 ? "shadow-2xl shadow-black/20" : ""}`}
+            onMouseEnter={() => toggleActive(2)}
+            onMouseLeave={() => toggleActive(null)}
+          >
+            <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
+              <motion.button
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
+              >
+                Sanitizer
+              </motion.button>
+
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full mb-3 sm:mb-4"
+              >
+                <motion.h2
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
+                >
+                  Facial mask deals save up to 50%
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
+              >
+                <Link
+                  className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
+                  to="/shop"
+                >
+                  <BsEyeFill className="text-lg sm:text-xl" />
+                  Discover now
+                </Link>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full max-w-[130px] flex justify-center items-center"
+            >
+              <img
+                className="w-full h-auto max-h-[202px] object-contain"
+                src="/Images/realistic-medical-mask-with-shadows-1.png"
+                alt="realistic-medical-mask"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
-    </motion.div>
-
-    {/* Card 3 */}
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7 }}
-      className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
-    >
-      <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-[80px] h-[30px] bg-[#D3744A] text-white rounded-md mb-3 sm:mb-4 text-xs sm:text-sm"
-        >
-          Sanitizer
-        </motion.button>
-
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full mb-3 sm:mb-4"
-        >
-          <motion.h2
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-lg sm:text-xl md:text-2xl font-bold text-[#503217] leading-tight"
-          >
-            Facial mask deals save up to 50%
-          </motion.h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full"
-        >
-          <Link
-            className="flex items-center gap-2 underline decoration-[#D3744A] w-fit text-sm sm:text-base"
-            to="/shop"
-          >
-            <BsEyeFill className="text-lg sm:text-xl" />
-            Discover now
-          </Link>
-        </motion.div>
-      </div>
-
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-[130px] flex justify-center items-center"
-      >
-        <img
-          className="w-full h-auto max-h-[202px] object-contain"
-          src="/Images/realistic-medical-mask-with-shadows-1.png"
-          alt="realistic-medical-mask"
-        />
-      </motion.div>
-    </motion.div>
-  </div>
-</motion.div>
 
 
 
-   
+
     </>
 
   )
