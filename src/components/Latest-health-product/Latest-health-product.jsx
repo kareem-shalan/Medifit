@@ -84,11 +84,11 @@ export function LatestHealthProduct() {
                 absolute bottom-[-100%] left-0
                 group-hover:bottom-0
                 group-active:bottom-0
-                group-focus-within:bottom-0
-                group-focus-within:bg-[#D3744A]/80
-                group-focus-within:text-black
-                group-focus-within:shadow-lg
-                group-focus-within:shadow-black/20
+                group-checked:bottom-0
+                group-checked:bg-[#D3744A]/80
+                group-checked:text-black
+                group-checked:shadow-lg
+                group-checked:shadow-black/20
                 group-active:bg-[#D3744A]/80
                  transition-all duration-300 ease-out "
               >
@@ -244,11 +244,11 @@ export function LatestHealthProduct() {
                 absolute bottom-[-100%] left-0
                 group-hover:bottom-0
                 group-active:bottom-0
-                group-focus-within:bottom-0
-                group-focus-within:bg-[#D3744A]/80
-                group-focus-within:text-black
-                group-focus-within:shadow-lg
-                group-focus-within:shadow-black/20
+                group-checked:bottom-0
+                group-checked:bg-[#D3744A]/80
+                group-checked:text-black
+                group-checked:shadow-lg
+                group-checked:shadow-black/20
                 group-active:bg-[#D3744A]/80
                  transition-all duration-300 ease-out "
               >
