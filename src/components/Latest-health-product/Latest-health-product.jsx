@@ -66,9 +66,7 @@ export function LatestHealthProduct() {
               onClick={() =>
                 setLinkActive(LinkActive === index ? null : index) // ✅ toggle
               }
-              onTouchStart={() =>
-                setLinkActive(LinkActive === index ? null : index) // ✅ يشتغل باللمس
-              }
+            
               initial={{ scale: 0, opacity: 0, x: -100 }}
               animate={{ scale: 1, opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -216,9 +214,7 @@ export function LatestHealthProduct() {
             onClick={() =>
               setLinkActive(LinkActive === index ? null : index) // ✅ toggle
             }
-            onTouchStart={() =>
-              setLinkActive(LinkActive === index ? null : index) // ✅ يشتغل باللمس
-            }
+          
             className="group w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] xl:w-[calc(25%-1.25rem)] 2xl:w-[300px]
          h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px]
          flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center
