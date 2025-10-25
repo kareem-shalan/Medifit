@@ -5,7 +5,7 @@ import { BiCheckCircle, BiShoppingBag } from 'react-icons/bi';
 import { FaTruck, FaHeadset, FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import data from '../../data.json';
 import { motion } from "motion/react"
-import { TbMassage } from 'react-icons/tb';
+
 
 export function LatestHealthProduct() {
   // Add this data array at the top of the component (along with the topSellingProducts)
@@ -28,7 +28,7 @@ export function LatestHealthProduct() {
     settopSellingProducts(data.topSellingProducts);
     setfollowUs(data.followUs);
     
-  }, [data.latestHealthProducts, data.topSellingProducts, , data.followUs])
+  }, [data.latestHealthProducts, data.topSellingProducts, data.followUs])
 
     ;
 
@@ -88,12 +88,14 @@ export function LatestHealthProduct() {
 
               <Link
                 to="/shop"
-
-                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+                className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
                 absolute bottom-[-100%] left-0
                 group-hover:bottom-0
                 group-active:bottom-0
-                ${LinkActive === index ? "bottom-0" : "bottom-[-100%]"}
+                ${LinkActive === index ? "bottom-0 z-50" : "bottom-[-100%]"}
                 group-active:bg-[#D3744A]/80
                  transition-all duration-300 ease-out ${LinkActive === index ? "bg-[#D3744A]/80" : "bg-[#D3744A]"}`}
               >
@@ -246,12 +248,14 @@ export function LatestHealthProduct() {
 
             <Link
               to="/shop"
-
-              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              className={`w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105 cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
                 absolute bottom-[-100%] left-0
                 group-hover:bottom-0
                 group-active:bottom-0
-                ${LinkActive === index ? "bottom-0" : "bottom-[-100%]"}
+                ${LinkActive === index ? "bottom-0 z-50" : "bottom-[-100%]"}
                 group-active:bg-[#D3744A]/80
                  transition-all duration-300 ease-out ${LinkActive === index ? "bg-[#D3744A]/80" : "bg-[#D3744A]"}`}
             >
