@@ -112,7 +112,7 @@ export function ShopByCategory() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
+            className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
           >
             <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
               <motion.button
@@ -175,7 +175,7 @@ export function ShopByCategory() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
+            className="flex justify-center items-center p-2 bg-white rounded-3xl hover:shadow-2xl hover:shadow-black/20 active:shadow-2xl active:shadow-black/20 transition-all duration-300 ease-out touch-manipulation"
           >
             <div className="w-full max-w-[195px] text-[#8F7D6A] font-bold flex flex-col justify-center items-start p-2 sm:p-3">
               <motion.button
