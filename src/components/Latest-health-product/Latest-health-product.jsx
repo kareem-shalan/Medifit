@@ -78,7 +78,16 @@ export function LatestHealthProduct() {
 
               {/* Hover Button */}
 
-              <Link
+              <motion.div
+          initial={{ scale: 0, opacity: 0, x: -100 }}
+          animate={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
+                absolute bottom-[-100%] left-0
+                group-hover:bottom-0
+                 transition-all duration-300 ease-out "
+         >
+         <Link
                 to="/shop"
                 className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
                 absolute bottom-[-100%] left-0
@@ -88,6 +97,7 @@ export function LatestHealthProduct() {
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
               </Link>
+         </motion.div>
 
 
 
@@ -229,7 +239,16 @@ export function LatestHealthProduct() {
             </motion.div>
 
             {/* Hover Button */}
-            <Link
+         <motion.div
+          initial={{ scale: 0, opacity: 0, x: -100 }}
+          animate={{ scale: 1, opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
+                absolute bottom-[-100%] left-0
+                group-hover:bottom-0
+                 transition-all duration-300 ease-out "
+         >
+         <Link
                 to="/shop"
                 className="w-full h-[30px] flex items-center justify-center gap-2 bg-[#D3744A] text-white rounded-md p-2 transform-3d group-hover:scale-105  cursor-pointer hover:bg-[#D3744A]/80 hover:text-black hover:shadow-lg hover:shadow-black/20
                 absolute bottom-[-100%] left-0
@@ -239,6 +258,7 @@ export function LatestHealthProduct() {
                 <BsEyeFill className="text-2xl" />
                 <p className="text-sm">View</p>
               </Link>
+         </motion.div>
 
             {/* Product Info */}
             <motion.div className={`w-full h-[180px] sm:h-[200px] text-[#8F7D6A] font-bold flex justify-start items-center ${product.extraClasses}`}>
