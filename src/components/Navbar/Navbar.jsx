@@ -12,7 +12,7 @@ export function Navbar() {
     <>
       {showMenu && (
         <div
-          className="fixed  w-full  bg-opacity-50  z-30 md:hidden transition-opacity duration-300"
+          className="fixed   w-full  bg-opacity-50  z-30 md:hidden transition-opacity duration-300"
           onClick={() => setShowMenu(false)}
         />
       )}
@@ -26,7 +26,7 @@ export function Navbar() {
           </div>
 
           <div >
-            <ul className={`md:flex md:items-center md:justify-around md:gap-6 lg:gap-8 ${showMenu ? 'flex' : 'hidden'} md:relative absolute top-0 md:top-0 left-0 w-full md:w-auto md:h-auto h-screen bg-white/95 md:bg-transparent flex-col md:flex-row items-center justify-start md:justify-around pt-8 md:pt-0 space-y-6 md:space-y-0 shadow-2xl md:shadow-none transition-all duration-300 ease-in-out z-40`}>
+            <ul className={`md:flex md:items-center md:justify-around md:gap-6 lg:gap-8 ${showMenu ? 'flex' : 'hidden'} md:relative absolute top-0 md:top-0 left-0 w-full md:w-auto md:h-auto  bg-white/80 md:bg-transparent flex-col md:flex-row items-center justify-start md:justify-around pt-8 md:pt-0 space-y-6 md:space-y-0 shadow-2xl md:shadow-none transition-all pb-5 md:pb-0  duration-300 ease-in-out z-40`}>
               <li>
                 <NavLink
                   to='/home'

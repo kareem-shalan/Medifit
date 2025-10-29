@@ -76,17 +76,19 @@ export function LatestHealthProduct() {
               className="group h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] xl:h-[360px] flex flex-col my-3 sm:my-4 md:my-5 justify-center items-center p-2 bg-white rounded-3xl relative overflow-hidden touch-manipulation"
             >
               {/* Image + Badge */}
-              <div className="w-1/2 relative mb-[15px]">
-                <div className="w-full flex items-center justify-center object-cover relative">
+              <div className="w-1/2 relative  mb-[15px] h-full flex items-center justify-center">
+                <div className="size-[70px] flex items-center justify-center object-fill relative">
                   <img
-                    className={`${product.imageSize} h-fit object-center z-10 transition-all duration-300 ease-out`}
+                    className={`${product.imageSize} h-fit 
+                    
+                    object-center z-10 transition-all duration-300 ease-out`}
                     src={product.image}
                     alt={product.name}
                   />
                 </div>
 
                 {product.badge && (
-                  <div className="w-[80px] h-[30px] flex items-center justify-center bg-[#D3744A] text-white rounded-md mb-[38px] absolute top-5 left-[-60px]">
+                  <div className="w-[80px] h-[30px] flex items-center justify-center bg-[#D3744A] text-white rounded-md mb-[38px] absolute top-5 left-[-60px] ">
                     <p className="text-sm">{product.badge}</p>
                   </div>
                 )}
@@ -232,9 +234,9 @@ export function LatestHealthProduct() {
           >
             {/* Image + Badge */}
             <div className="w-1/2 relative mb-[15px] h-full flex items-center justify-center">
-              <div className="w-full flex items-center justify-center object-cover relative">
+              <div className="size-[70px] flex items-center justify-center object-cover relative">
                 <img
-                  className={`${product.imageSize} h-fit object-center z-10 transition-all duration-300 ease-out`}
+                  className={`${product.imageSize} h-fit  object-center z-10 transition-all duration-300 ease-out`}
                   src={product.image}
                   alt={product.name}
                 />

@@ -474,6 +474,72 @@
             "name": "Follow us on LinkedIn",
             "link": "https://www.linkedin.com/company/medifit" 
         }
-    ]
+    ],
+
+    "homeProducts" : [
+        {
+          "id": 1,
+          "name": "Hair tablets",
+          "price": "$45.00 USD",
+          "originalPrice": "$75.00 USD",
+          "image": "/Images/B12-medicine.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": ""
+        },
+        {
+          "id": 2,
+          "name": "Pressure  measuring",
+          "price": "$19.00 USD",
+          "originalPrice": null,
+          "image": "/Images/Pressure_measuring.png",
+          "badge": "save 10%",
+          "imageSize": "size-[200px]",
+          "extraClasses": "mt-7"
+        },
+        {
+          "id": 3,
+          "name": "Diving mask",
+          "price": "$40.00 USD",
+          "originalPrice": "$60.00 USD",
+          "image": "/Images/Diving_mask.png",
+          "badge": null,
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-5"
+        },
+        {
+          "id": 4,
+          "name": "Temperature gun",
+          "price": "$50.00 USD",
+          "originalPrice": null,
+          "image": "/Images/Temperature_gun.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 5,
+          "name": "Laboratory gloves",
+          "price": "$10.00 USD",
+          "originalPrice": "30.00 USD",
+          "image": "/Images/Lab-hand-gloves.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        },
+        {
+          "id": 6,
+          "name": "Nebulizer mask",
+          "price": "$20.00 USD",
+          "originalPrice": null,
+          "image": "/Images/Nebulizer_mask.png",
+          "badge": "New",
+          "imageSize": "size-[100px]",
+          "extraClasses": "pb-1"
+        }
+    
+     
+    
+      ]
       
 }

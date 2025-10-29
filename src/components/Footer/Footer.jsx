@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export function Footer() {
+  const handleScrollToTop = ()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })}
   return (
     <>
 
@@ -19,19 +24,19 @@ export function Footer() {
              <p >Products</p>
             </motion.li>
             <motion.li className='font-bold '>
-              <Link to='/'>Home</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/home'>Home</Link>
             </motion.li>
             <motion.li>
-              <Link to='/shop'>Shop</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/shop'>Shop</Link>
             </motion.li>
             <motion.li>
-              <Link to='/about'>About</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/about'>About</Link>
             </motion.li>
             <motion.li>
-              <Link to='/contact'>Contact</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/contact'>Contact</Link>
             </motion.li>
             <motion.li>
-              <Link to='/blog'>Blog</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/blog'>Blog</Link>
             </motion.li>
 
 
@@ -43,19 +48,19 @@ export function Footer() {
              <p >Products</p>
             </motion.li>
             <motion.li className='font-bold '>
-              <Link to='/'>Home</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/'>Home</Link>
             </motion.li>
             <motion.li>
-              <Link to='/shop'>Shop</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/shop'>Shop</Link>
             </motion.li>
             <motion.li>
-              <Link to='/about'>About</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/about'>About</Link>
             </motion.li>
             <motion.li>
-              <Link to='/contact'>Contact</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/contact'>Contact</Link>
             </motion.li>
             <motion.li>
-              <Link to='/blog'>Blog</Link>
+              <Link onClick={()=>handleScrollToTop()} to='/blog'>Blog</Link>
             </motion.li>
 
 
@@ -69,8 +74,8 @@ export function Footer() {
 
         <div className="info flex gap-4 md:w-1/2 w-full justify-center items-center flex-col">
           <div className="logo flex gap-4 w-1/2 justify-center items-center ">
-            <img src="/Images/logo-2.png" alt="Logo" />
-            <img src="/Images/Medifit.png" alt="Logo" />
+         <Link onClick={()=>handleScrollToTop()} to='/'>   <img src="/Images/logo-2.png" alt="Logo" /></Link>
+            <Link onClick={()=>handleScrollToTop()} to='/'>   <img src="/Images/Medifit.png" alt="Logo" /></Link>
           </div>
 
           <div className="text-center text-gray-500/70 text-sm">

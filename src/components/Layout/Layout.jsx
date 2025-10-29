@@ -8,7 +8,7 @@ export function Layout() {
 
       <Navbar />
 
-      <div className='w-full mx-auto  bg-[#EEEDE7] min-h-screen flex flex-col items-center justify-start'>
+      <div className='w-full mx-auto  bg-[#EEEDE7] min-h-screen flex flex-col items-center justify-start overflow-hidden'>
         <Outlet />
       </div>
 
