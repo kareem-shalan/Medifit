@@ -196,8 +196,10 @@ export function MainHeroHome() {
 
 
 
-      <motion.div className='w-full  container mx-auto  p-4  flex
-       items-center justify-around gap-4  my-15 0   ' >
+      <motion.div className='w-full   container mx-auto  p-4  flex
+      
+      
+       items-center justify-around gap-4  my-15  ' >
 
         {
           SpecialLines?.map((item, index) => (
@@ -205,8 +207,8 @@ export function MainHeroHome() {
 
               initial={{ filter: "blur(100px) ", x: -100 }} animate={{ filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.1 * index }}
               key={item.id} className='flex flex-col     items-center justify-center gap-2 '>
-              <motion.img initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }} className='size-6 xl:size-10 object-cover rounded-4xl' src={item.image} alt="hero-image" />
-              <motion.p initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.2 }} className='text-[10px] xl:text-sm  whitespace-nowrap text-[#503217] font-bold'>{item.title}</motion.p>
+              <motion.img initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }} className='size-5 xl:size-10 object-cover rounded-4xl' src={item.image} alt="hero-image" />
+              <motion.p initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.2 }} className='text-[7px] xl:text-sm  whitespace-nowrap text-[#503217] font-bold'>{item.title}</motion.p>
             </motion.div>
           ))
 
