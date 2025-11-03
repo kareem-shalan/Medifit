@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
-*{
-   
-    
+* {
+
+
     box-sizing: border-box;
+
+  
+        font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
     
-    font-family: fantasy ;
-    font-weight: 400;
-    
+
+
 }
-
-
-

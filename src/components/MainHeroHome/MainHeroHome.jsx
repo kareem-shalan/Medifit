@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { motion } from 'motion/react';
 import { LuShoppingCart } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
 import { GiEagleEmblem, GiMagicTrident } from 'react-icons/gi';
 import { SiGnuprivacyguard, SiGoogleearth } from 'react-icons/si';
-import { FaArrowRight, FaHandsAslInterpreting } from 'react-icons/fa6';
+import { FaArrowRight, FaHandsAslInterpreting, FaQuoteLeft } from 'react-icons/fa6';
 import { homeProducts } from "../../data.json"
 import { BsEyeFill } from 'react-icons/bs';
+import data from '../../data.json'
+import { HiCalendarDateRange } from 'react-icons/hi2';
 
 
 export function MainHeroHome() {
 
   const [AllHomeProducts, setAllHomeProducts] = useState([])
+  const [ShopByBottles, setShopByBottles] = useState([])
+  const [customersReview, setCustomersReview] = useState([])
   const [LinkActive, setLinkActive] = useState(null)
+  const [BottleIsActive, setBottleIsActive] = useState(null)
 
   const lineIcons = [
     {
@@ -81,10 +86,16 @@ export function MainHeroHome() {
 
 
 
+
+  console.log(BottleIsActive)
+
   useEffect(() => {
+    setShopByBottles(data.ShopByCategoryBottles)
+    setCustomersReview(data.feedbacks)
     setAllHomeProducts(homeProducts)
     setLinkActive(null);
-  }, [homeProducts])
+    setBottleIsActive(null);
+  }, [homeProducts, data.feedbacks])
   return (
     <>
 
@@ -116,7 +127,7 @@ export function MainHeroHome() {
 
 
               <motion.p initial={{ scale: 0, filter: "blur(100px)", y: 100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className='md:w-[320px] w-full  text-sm sm:text-base md:text-lg leading-relaxed  font-serif text-[#563716]'>Your health is in good hands with Medifit. We’re here to provide you with a wide range of healthcare essentials, carefully selected.</motion.p>
-              <motion.Link to='/shop' initial={{ scale: 0, filter: "blur(100px) ", y: 100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.9 }} className='bg-[#503217] text-white  w-[150px] h-[40px] md:mt-10 mt-4 flex items-center justify-center gap-2 rounded-md'>Shop Now <LuShoppingCart className='text-2xl' /></motion.Link>
+              <motion.Link to='/shop' initial={{ scale: 0, filter: "blur(100px) ", y: 100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.9 }} className='bg-[#503217] text-white  w-[150px] h-[40px] md:mt-10 mt-4 flex items-center justify-center gap-2 rounded-md cursor-pointer'>Shop Now <LuShoppingCart className='text-2xl' /></motion.Link>
 
 
             </motion.div>
@@ -128,14 +139,18 @@ export function MainHeroHome() {
 
         </section>
 
-        <section className='xl:w-[50%] w-full relative    flex items-center justify-center flex-col xl:ms-36 ms-0 xl:mb-36 mt-[-15px] md:mt-0  order-1 xl:order-2  '>
+        <motion.section
 
 
-          <img className='w-full    h-full object-cover self-end ' src="/Images/Home-Hero.png " alt="hero-image" />
+          className='xl:w-[50%] w-full relative    flex items-center justify-center flex-col xl:ms-36 ms-0 xl:mb-36 mt-[-15px] md:mt-0  order-1 xl:order-2  '>
 
 
 
-        </section>
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className='w-full    h-full object-cover self-end ' src="/Images/Home-Hero.png " alt="hero-image" />
+
+
+
+        </motion.section>
 
 
 
@@ -318,6 +333,252 @@ export function MainHeroHome() {
 
 
       </motion.div>
+
+
+      {/* Shop by category  bottles   */}
+
+      <motion.h2 initial={{ scale: 0, filter: "blur(100px)" }} animate={{ scale: 1, filter: "blur(0px)" }} transition={{ duration: 0.5, delay: 0.5 }} className='text-2xl text-[#503217] font-bold mb-10'>Shop by category</motion.h2>
+
+      <motion.div className='w-full   container mx-auto    flex flex-wrap 
+      xl:flex-nowrap
+       items-center justify-center  gap-4  my-15    ' >
+
+
+
+
+
+        {ShopByBottles?.map((bottle) => (
+          <motion.div key={bottle.id}
+            onClick={() => setBottleIsActive(BottleIsActive === bottle.id ? null : bottle.id)}
+            animate
+            className={` w-[300px]  h-[180px] rounded-3xl p-5  flex justify-center items-center gap-3    
+          
+            transition-all duration-1000 delay-200 ease-in-out   transform
+          
+          ${BottleIsActive === bottle.id ? "cursor-pointer " : "bg-white cursor-pointer group-hover:bg-white"}`}>
+
+
+            <motion.div initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }} className={`  ${BottleIsActive === bottle.id ? "object-contain size-1/2 flex flex-col items-center justify-center " : "hidden    transition-all duration-1000 delay-200 ease-out  transform"}`}>
+
+
+              <motion.img initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }} className='  object-contain size-5  ' src={bottle.icon} alt="hero-image" />
+
+              <motion.p initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.2 }} className=' text-sm  whitespace-nowrap text-[#503217] font-bold'>{bottle.name}</motion.p>
+
+            </motion.div>
+
+            <motion.div initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }} className='w-1/2 h-full  p-2 flex items-center justify-center'>
+              <motion.img initial={{ scale: 0, filter: "blur(100px) ", x: -100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1.1 }}
+                className={`  object-contain w-full   ${BottleIsActive === bottle.id ? "animate-bounce " : ""}`} src={bottle.image} alt="hero-image" />
+            </motion.div>
+
+          </motion.div>
+        ))}
+
+      </motion.div>
+
+      {/* save 10% off on all bottles */}
+
+
+
+      <motion.div className="w-full container mx-auto flex flex-row items-center justify-center gap-8 my-10 px-4">
+        {/* Image Section */}
+        <motion.div
+          initial={{ scale: 0, filter: "blur(100px)", x: -100 }}
+          animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+          className="relative flex items-center justify-center rounded-4xl w-full max-w-[600px] p-4 me-auto"
+        >
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+            className="w-full h-auto object-cover rounded-4xl"
+            src="/Images/young-woman.png"
+            alt="save-10-off"
+          />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+            className="absolute w-[80px] sm:w-[100px] md:w-[150px] lg:w-[200px] object-cover rounded-4xl transform -translate-x-1/2 left-[100%]"
+            src="/Images/Mask-group.png"
+            alt="save-10-off"
+          />
+        </motion.div>
+
+        {/* Text Section */}
+        <motion.div className="flex flex-col items-start justify-start w-full max-w-[450px] h-auto ms-10  p-6 rounded-xl">
+          <motion.p
+            initial={{ scale: 0, filter: "blur(100px)", y: -100 }}
+            animate={{ scale: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="text-xl text-[#503217] font-bold mb-4 "
+          >
+            Save up to 10% on select tablets — limited time only!
+          </motion.p>
+          <motion.p
+            initial={{ scale: 0, filter: "blur(100px)", y: -100 }}
+            animate={{ scale: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            className="text-sm text-[#503217]/40 font-medium mb-4 "
+          >
+            Don't miss out on our limited-time sale! 10% discount on a wide range of essential health products.
+          </motion.p>
+          <motion.button
+            initial={{ scale: 0, filter: "blur(100px)", y: -100 }}
+            animate={{ scale: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
+            className="bg-[#503217] text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 cursor-pointer"
+          >
+            View sale products <FaArrowRight />
+          </motion.button>
+        </motion.div>
+      </motion.div>
+
+
+
+      {/* {Customers review} */}
+
+      <motion.div initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+        <motion.h2 initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className='text-2xl text-[#503217] font-bold mb-10'>Customers review</motion.h2>
+      </motion.div>
+
+
+      <motion.div className='w-full container mx-auto flex flex-wrap items-center xl:justify-center md:justify-start gap-4 my-10 px-4 justify-center'>
+
+
+
+
+
+        {
+
+
+          customersReview.map((review) => (
+
+            <div className=' flex flex-col items-start justify-center gap-4'>
+
+
+              <motion.div initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+
+                className='flex flex-col items-center      justify-center gap-5 w-[250px] bg-white rounded-2xl p-4
+                h-[150px]
+                
+                '>
+
+                <p className='text-sm text-[#503217]/40 font-medium mb-4 flex items-start justify-center gap-2'>
+                  <FaQuoteLeft className='font-bold text-3xl
+                  ' />
+                  {review.feedback}
+                </p>
+
+
+
+
+
+              </motion.div>
+
+              <motion.div className='flex items-center justify-center gap-2'>
+                <motion.img
+                  initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+                  className='rounded-full size-10 object-cover'
+                  src={review.image} alt="customer-review" />
+                <motion.p initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className='text-sm text-[#503217]/40 font-medium mt-4 flex '>{review.name}</motion.p>
+              </motion.div>
+
+            </div>
+
+
+          ))
+
+        }
+
+
+
+
+
+
+
+
+        {/* {Healthcare Insights} */}
+
+
+
+      </motion.div>
+
+
+
+
+      <motion.div
+
+        className='w-full container mx-auto flex flex-wrap items-center xl:justify-center md:justify-start gap-4 my-10 px-4 justify-center'
+        initial={{ scale: 0, filter: "blur(100px)", x: 100 }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+
+        <motion.h2 initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+          className='text-2xl text-[#503217] font-bold my-10 text-start w-full'>Customers review</motion.h2>
+      </motion.div>
+
+
+
+
+
+
+      <div className='flex justify-between  items-center gap-4 p-5 '>
+
+
+
+
+        <div className='flex w-1/2 items-start justify-center gap-4   rounded-2xl'>
+
+          <div className='w-full h-full '>
+            <motion.img initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+              className='w-full h-full object-cover' src="/Images/Rectangle.png" alt="healthcare-insights" />
+
+          </div>
+
+          <div className='w-full h-full text-[#503217] flex flex-col items-start 
+            justify-start gap-4'>
+            <p className='flex items-center text-[#503217]/40 font-medium justify-center gap-2'> <HiCalendarDateRange /> October 25, 2024
+
+
+            </p>
+
+            <h3 className='text-2xl font-bold self-start '>Living well with chronic conditions</h3>
+
+
+
+            <Link className='text-sm mt-auto underline' to='/about'>Read more</Link>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div className='flex w-1/2 items-start justify-center gap-4  rounded-2xl'>
+
+          <div className='w-1/2 h-full '>
+            <motion.img initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+              className='w-full h-full object-cover' src="/Images/Rectangle2.png" alt="healthcare-insights" />
+
+          </div>
+
+          <div className='w-1/2 h-full text-[#503217] flex flex-col items-start 
+justify-start gap-4'>
+            <p className='flex items-center text-[#503217]/40 font-medium justify-center gap-2'> <HiCalendarDateRange /> October 25, 2024
+
+            </p>
+
+            <h3 className='text-2xl font-bold self-start '>Strength home-Based fitness essential</h3>
+
+
+
+            <Link className='text-sm mt-auto underline' to='/about'>Read more</Link>
+
+
+          </div>
+
+
+        </div>
+
+
+
+      </div>
 
 
 
