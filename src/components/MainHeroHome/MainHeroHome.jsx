@@ -381,21 +381,21 @@ export function MainHeroHome() {
 
 
 
-      <motion.div className="w-full container mx-auto flex flex-row items-center justify-center gap-8 my-10 px-4">
+      <motion.div className="w-full container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 my-10 px-4">
         {/* Image Section */}
         <motion.div
           initial={{ scale: 0, filter: "blur(100px)", x: -100 }}
           animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
           transition={{ duration: 0.5, delay: 1.1 }}
-          className="relative flex items-center justify-center rounded-4xl w-full max-w-[600px] p-4 me-auto"
+          className="relative flex items-center justify-center rounded-4xl w-full md:max-w-[600px] max-w-[300px] p-4 md:me-auto mx-auto"
         >
           <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="w-full h-auto object-cover rounded-4xl"
+            className="w-[80%] md:w-full h-auto object-cover rounded-4xl   shadow-2xl shadow-[#503217]/70 "
             src="/Images/young-woman.png"
             alt="save-10-off"
           />
           <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className="absolute w-[80px] sm:w-[100px] md:w-[150px] lg:w-[200px] object-cover rounded-4xl transform -translate-x-1/2 left-[100%]"
+            className="absolute w-[40%] shadow-2xl shadow-[#503217]/50 sm:w-[100px] md:w-[150px] lg:w-[200px] object-cover rounded-4xl transform -translate-x-1/2 left-[85%] md:left-[90%] "
             src="/Images/Mask-group.png"
             alt="save-10-off"
           />
@@ -517,20 +517,28 @@ export function MainHeroHome() {
 
 
 
-      <div className='flex justify-between  items-center gap-4 p-5 '>
+      <div className='flex justify-between flex-col md:flex-row  items-center gap-4 p-5 '>
 
 
 
 
-        <div className='flex w-1/2 items-start justify-center gap-4   rounded-2xl'>
+        <motion.div 
+        initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.5  , ease: "easeInOut" }}
+        
+        className='flex w-full md:w-1/2 items-start justify-center gap-4   rounded-2xl'>
 
           <div className='w-full h-full '>
-            <motion.img initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+            <motion.img 
+        
               className='w-full h-full object-cover' src="/Images/Rectangle.png" alt="healthcare-insights" />
 
           </div>
 
-          <div className='w-full h-full text-[#503217] flex flex-col items-start 
+          <motion.div 
+          initial={{ scale: 0, filter: "blur(100px)", x: "100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1 , ease: "easeInOut" }}
+          
+          
+          className='w-full h-full text-[#503217] flex flex-col items-start 
             justify-start gap-4'>
             <p className='flex items-center text-[#503217]/40 font-medium justify-center gap-2'> <HiCalendarDateRange /> October 25, 2024
 
@@ -544,13 +552,17 @@ export function MainHeroHome() {
             <Link className='text-sm mt-auto underline' to='/about'>Read more</Link>
 
 
-          </div>
+          </motion.div>
 
 
-        </div>
+        </motion.div>
 
 
-        <div className='flex w-1/2 items-start justify-center gap-4  rounded-2xl'>
+        <motion.div
+        
+        
+        
+        initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.5  , ease: "easeInOut" }}className='flex w-full md:w-1/2 items-start justify-center gap-4  rounded-2xl'>
 
           <div className='w-1/2 h-full '>
             <motion.img initial={{ scale: 0, filter: "blur(100px)", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
@@ -558,7 +570,11 @@ export function MainHeroHome() {
 
           </div>
 
-          <div className='w-1/2 h-full text-[#503217] flex flex-col items-start 
+          <motion.div
+          
+          initial={{ scale: 0, filter: "blur(100px)", x: "100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 1 , ease: "easeInOut" }}
+          
+          className='w-1/2 h-full text-[#503217] flex flex-col items-start 
 justify-start gap-4'>
             <p className='flex items-center text-[#503217]/40 font-medium justify-center gap-2'> <HiCalendarDateRange /> October 25, 2024
 
@@ -571,10 +587,10 @@ justify-start gap-4'>
             <Link className='text-sm mt-auto underline' to='/about'>Read more</Link>
 
 
-          </div>
+          </motion.div>
 
 
-        </div>
+        </motion.div>
 
 
 
