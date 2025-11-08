@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react';
 
-import data from '../../data.json'
-import { FaCheckCircle } from 'react-icons/fa';
 import { GiMissilePod } from 'react-icons/gi';
 import { GoCommit } from 'react-icons/go';
 import { BsEye } from 'react-icons/bs';
@@ -39,7 +37,7 @@ export function About() {
 
   useEffect(() => {
     setSpecialLines(aboutUsData)
-  }, [SpecialLines])
+  }, [])
 
   return (
     <>
