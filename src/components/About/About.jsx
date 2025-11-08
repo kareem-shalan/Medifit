@@ -4,9 +4,11 @@ import { motion } from 'motion/react';
 import { GiMissilePod } from 'react-icons/gi';
 import { GoCommit } from 'react-icons/go';
 import { BsEye } from 'react-icons/bs';
+import { FaArrowRight } from 'react-icons/fa';
 
 export function About() {
   const [SpecialLines, setSpecialLines] = useState([])
+  const [LinkActive, setLinkActive] = useState(null)
 
   const aboutUsData = [
 
@@ -36,6 +38,7 @@ export function About() {
   ]
 
   useEffect(() => {
+    setLinkActive(null)
     setSpecialLines(aboutUsData)
   }, [])
 
@@ -123,7 +126,7 @@ export function About() {
       {/* What to Expect When You Join Our Team */}
 
 
-      <div className='w-full  bg-white '>
+      <motion.div className='w-full  bg-white '>
         <motion.div className='w-full container mx-auto flex flex-col items-start  justify-center'>
 
 
@@ -131,51 +134,88 @@ export function About() {
 
 
           < motion.div
-          className=' w-full flex  items-center justify-center gap-4'
+            className=' w-full flex  items-center justify-center gap-4'
 
 
 
           >
 
 
-          
-           
-
-            <motion.div  className=' w-full p-10  flex flex-col md:flex-row items-center justify-center gap-2'>
-
-
-            <ul className='flex flex-col items-start justify-center gap-2 self-start'>
-              <motion.li initial={{ scale: 0, filter: "blur(100px)",x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }} 
-              className='hover:scale-125 text-[#503217] cursor-pointer hover:px-5  transition-all duration-300 flex items-center justify-center gap-2'> <GiMissilePod /> Mission</motion.li>
-              <motion.li 
-              
-              initial={{ scale: 0, filter: "blur(100px)",x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
-               className='hover:scale-125 text-[#503217] cursor-pointer hover:px-5 transition-all duration-300 flex items-center justify-center gap-2'> < GoCommit /> Commitments</motion.li>
-
-              <motion.li initial={{ scale: 0, filter: "blur(100px)",x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.7, delay: 0.9, ease: "easeInOut" }}
-               className='hover:scale-125 cursor-pointer hover:px-5 text-[#503217] transition-all duration-300 flex items-center justify-center gap-2'> <BsEye /> Vision</motion.li>
-            </ul>
 
 
 
-              <motion.img 
-              initial={{ scale: 0, filter: "blur(100px)",x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
-              className='md:max-w-[200px] object-cover'
-              src="/Images/Mission.png" alt="What-to-Expect-When-You-Join-Our-Team" />
-
-            <div className='flex flex-col items-start justify-center gap-2 self-end'>
-      
-            <motion.p initial={{ scale: 0, filter: "blur(100px)",x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.8, delay: 1.0, ease: "easeInOut" }}
-             className='md:max-w-[300px] mt-4 md:mt-0 text-sm text-[#503217]/40 font-bold'>
-            Our mission is to provide the best products and services to our customers.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eaque maiores doloribus impedit totam numquam!
-
-            </motion.p>
+            <motion.div className=' w-full p-10  flex flex-col md:flex-row items-center justify-center gap-2'>
 
 
-            
-            </div>
-              
+              <ul
+                className='flex flex-col items-start justify-center gap-2 self-start'>
+
+                {/* Mission - already correct */}
+                <motion.li
+                  onClick={() => setLinkActive(1)}
+                  initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
+                  animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
+                  className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 1 ? `hover:px-5 hover:scale-125` : null}
+    `}
+                >
+                  <GiMissilePod /> Mission
+                </motion.li>
+
+                {/* Commitments - updated */}
+                <motion.li
+                  onClick={() => setLinkActive(2)}
+                  initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
+                  animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
+                  className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 2 ? `hover:px-5 hover:scale-125` : null}
+    `}
+                >
+                  <GoCommit /> Commitments
+                </motion.li>
+
+                {/* Vision - updated */}
+                <motion.li
+                  onClick={() => setLinkActive(3)}
+                  initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
+                  animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.9, ease: "easeInOut" }}
+                  className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 3 ? `hover:px-5 hover:scale-125` : null}
+    `}
+                >
+                  <BsEye /> Vision
+                </motion.li>
+              </ul>
+
+
+
+              <motion.img
+                initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
+                className='md:max-w-[200px] object-cover'
+                src="/Images/Mission.png" alt="What-to-Expect-When-You-Join-Our-Team" />
+
+              <div className='flex flex-col items-start justify-center gap-2 self-end'>
+
+                <motion.p initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }} animate={{ scale: 1, filter: "blur(0px)", x: 0 }} transition={{ duration: 0.8, delay: 1.0, ease: "easeInOut" }}
+                  className='md:max-w-[300px] mt-4 md:mt-0 text-sm text-[#503217]/40 font-bold'>
+                  Our mission is to provide the best products and services to our customers.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eaque maiores doloribus impedit totam numquam!
+
+                </motion.p>
+
+
+
+              </div>
+
 
 
             </motion.div>
@@ -189,7 +229,61 @@ export function About() {
 
         </motion.div>
 
-      </div>
+      </motion.div>
+
+
+
+      {/* Join our trustable Medifit product  community */}
+
+
+
+      <motion.div className='w-full container mx-auto flex flex-col md:flex-row items-center justify-around gap-4 p-4 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl my-10'>
+
+
+
+        {/* text section   */}
+
+        <motion.div className='flex w-full - md:w-auto flex-col items-start justify-center order-2 md:order-1 '>
+          <motion.p initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+            className='md:text-4xl text-lg text-[#503217] font-bold'>Join our trustable</motion.p>
+          <motion.p initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className='md:text-4xl text-lg text-[#503217] font-bold'>Medifit product </motion.p>
+          <motion.p initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.7 }} className='md:text-4xl text-lg text-[#503217] font-bold mb-4'>community</motion.p>
+
+          <motion.p initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className='md:text-sm text-xs text-gray-500 font-bold'>Our store offers a comprehensive range of pharmaceuticals, health and wellness</motion.p>
+          <motion.p initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.9 }} className='md:text-sm text-xs text-gray-500 font-bold mb-4'> products, and medical supplies to meet the diverse needs of our community.</motion.p>
+
+          <motion.button initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 1.0 }} className='bg-[#503217] text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 cursor-pointer'>Get started <FaArrowRight /></motion.button>
+        </motion.div>
+
+
+
+
+
+
+        {/* gallery section */}
+
+
+        <motion.div
+          className='flex flex-wrap  items-center justify-center gap-4 p-4 w-full
+          
+          order-1 md:order-2
+          '
+        >
+
+          <motion.img
+
+            initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
+            className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[331px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-1.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[257px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-2.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.7 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[257px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-3.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[331px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-4.png" alt="" />
+        </motion.div>
+
+
+
+
+
+      </motion.div>
 
 
 
