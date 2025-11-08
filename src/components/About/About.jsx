@@ -159,7 +159,7 @@ export function About() {
                   className={`
       text-[#503217] cursor-pointer 
       transition-all duration-300 flex items-center justify-center gap-2
-      ${LinkActive === 1 ? `hover:px-5 hover:scale-125` : null}
+      ${LinkActive === 1 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}
     `}
                 >
                   <GiMissilePod /> Mission
@@ -174,7 +174,7 @@ export function About() {
                   className={`
       text-[#503217] cursor-pointer 
       transition-all duration-300 flex items-center justify-center gap-2
-      ${LinkActive === 2 ? `hover:px-5 hover:scale-125` : null}
+      ${LinkActive === 2 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl animate-pulse` : null}
     `}
                 >
                   <GoCommit /> Commitments
@@ -189,7 +189,7 @@ export function About() {
                   className={`
       text-[#503217] cursor-pointer 
       transition-all duration-300 flex items-center justify-center gap-2
-      ${LinkActive === 3 ? `hover:px-5 hover:scale-125` : null}
+      ${LinkActive === 3 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}
     `}
                 >
                   <BsEye /> Vision
@@ -237,7 +237,7 @@ export function About() {
 
 
 
-      <motion.div className='w-full container mx-auto flex flex-col md:flex-row items-center justify-around gap-4 p-4 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl my-10'>
+      <motion.div className='w-full container mx-auto flex flex-col md:flex-row items-center justify-around gap-4 p-4  my-10'>
 
 
 
@@ -273,10 +273,10 @@ export function About() {
           <motion.img
 
             initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}
-            className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[331px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-1.png" alt="" />
-          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[257px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-2.png" alt="" />
-          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.7 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[257px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-3.png" alt="" />
-          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className='rounded-3xl w-[120px] md:max-w-[302px] md:max-h-[331px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-4.png" alt="" />
+            className='rounded-3xl w-[120px] md:w-[150px] md:h-[170px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-1.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className='rounded-3xl w-[120px] md:w-[150px] md:h-[150px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-2.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.7 }} className='rounded-3xl w-[120px] md:w-[150px] md:h-[150px]  xl:w-[302px] xl:h-[257px] object-cover' src="/Images/gallery-3.png" alt="" />
+          <motion.img initial={{ scale: 0, filter: "blur(100px) ", y: -100 }} animate={{ scale: 1, filter: "blur(0px)", y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className='rounded-3xl w-[120px] md:w-[150px] md:h-[170px]  xl:w-[302px] xl:h-[331px] object-cover' src="/Images/gallery-4.png" alt="" />
         </motion.div>
 
 
