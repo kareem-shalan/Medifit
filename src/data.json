@@ -452,25 +452,26 @@
         {
             "id": 1,
             "image": "/Images/follow1.png",
-            "name": "Follow us on Instagram"
+            "name": "Follow us on Instagram",
+            "link": "https://www.instagram.com/kemo_shalan?igsh=czU4c2Q2cDQ0dmg1"
         },
         {
             "id": 2,
             "image": "/Images/follow-2.png",
             "name": "Follow us on Facebook",
-            "link": "https://www.facebook.com/medifit"
+            "link": "https://www.facebook.com/kareem-shalan"
         },
         {
             "id": 3,
             "image": "/Images/follow-3.png",
             "name": "Follow us on Twitter",
-            "link": "https://www.twitter.com/medifit"
+            "link": "https://www.instagram.com/kemo_shalan?igsh=czU4c2Q2cDQ0dmg1"
         },
         {
             "id": 4,
             "image": "/Images/follow-4.png",
             "name": "Follow us on LinkedIn",
-            "link": "https://www.linkedin.com/company/medifit"
+            "link": "https://www.linkedin.com/in/kareem-shalan/"
         }
     ],
     "homeProducts": [
