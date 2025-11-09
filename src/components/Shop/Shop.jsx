@@ -193,7 +193,7 @@ export function Shop() {
                   onClick={() =>
                     setLinkActive(LinkActive === product.id ? null : product.id)
                   }
-                  className="group h-[350px] flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden relative"
+                  className="group  h-[350px] flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden relative"
                 >
                   {/* Badge */}
                   {product.badge && (
@@ -203,7 +203,7 @@ export function Shop() {
                   )}
 
                   {/* Category Tag */}
-                  <div className="absolute top-4 right-4 bg-gray-100 text-gray-700 px-3 py-1 rounded-lg z-10">
+                  <div className="absolute bottom-[50%] translate-y-1/2 right-4 bg-gray-100 text-gray-700 px-3 py-1 rounded-lg z-10">
                     <p className="text-xs font-semibold">{product.categoryName}</p>
                   </div>
 
@@ -213,7 +213,7 @@ export function Shop() {
                       e.stopPropagation()
                       wishlist.toggleWishlist(product)
                     }}
-                    className={`absolute top-4 left-1/2 transform -translate-x-1/2 ${
+                    className={`absolute top-0 left-[90%] transform -translate-x-1/2 ${
                       wishlist.isInWishlist(product.id)
                         ? 'bg-red-500 text-white'
                         : 'bg-white text-red-500'

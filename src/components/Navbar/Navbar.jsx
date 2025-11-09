@@ -81,8 +81,10 @@ export function Navbar() {
 
           <div className='text-xl sm:text-2xl flex items-center justify-around gap-3 sm:gap-4'>
             {/* Search Icon */}
-            <CiSearch className='cursor-pointer hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 active:scale-110 transform' />
-            
+                    <Link to='/shop'>
+                    <CiSearch  className='cursor-pointer hover:text-[#8B5A3C] active:text-[#8B5A3C] transition-colors duration-200 hover:scale-110 active:scale-110 transform' />
+
+                    </Link>
             {/* Wishlist Icon with Badge */}
             <Link
               to="/wishlist"
