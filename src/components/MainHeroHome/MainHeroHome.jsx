@@ -292,7 +292,7 @@ export function MainHeroHome() {
 
               {/* Button */}
               <Link
-                to="/shop"
+                to={`/ShopDetail/homeProducts/${product.id}`}
                 className={`absolute left-0 w-full h-[40px] flex items-center justify-center gap-2 rounded-md text-white p-2 bg-[#D3744A] transition-all duration-300 ease-out
              ${LinkActive === index ? "bottom-0 z-50 bg-[#D3744A]/80 text-black shadow-lg shadow-black/20     group-hover:bottom-0 group-hover:bg-[#D3744A]/80 group-hover:text-black group-hover:shadow-lg group-hover:shadow-black/20  " : "bottom-[-100%]"}
             `}

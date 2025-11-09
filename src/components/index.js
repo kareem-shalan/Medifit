@@ -11,3 +11,4 @@ export * from './MainHero/MainHero';
 export * from './Shop-by-Category/Shop-by-Category';
 export * from './Latest-health-product/Latest-health-product';
 export * from './MainHeroHome/MainHeroHome';
+export * from './Wishlist/Wishlist';

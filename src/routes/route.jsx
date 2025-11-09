@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, About, Contact, MedicalStore, Layout, Shop} from "../components/index";
+import { Home, About, Contact, MedicalStore, Layout, Shop, ShopDetail, Wishlist} from "../components/index";
+import { Cart } from "../components/Cart/Cart.jsx";
 
 const route = createBrowserRouter([
     {
@@ -26,6 +27,18 @@ const route = createBrowserRouter([
                 path: "/shop",
                 element: <Shop />
 
+            },
+            {
+                path: "/ShopDetail/:type/:id",
+                element: <ShopDetail />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
+            },
+            {
+                path: "/wishlist",
+                element: <Wishlist />
             }
         ]
     }

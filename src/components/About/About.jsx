@@ -152,7 +152,14 @@ export function About() {
 
                 {/* Mission - already correct */}
                 <motion.li
-                  onClick={() => setLinkActive(1)}
+                  onClick={() => {
+                    setLinkActive(1) 
+                    if (LinkActive === 1) {
+                      setLinkActive(null)
+                    } else {
+                      setLinkActive(1)
+                    }
+                  }}
                   initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
                   animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
                   transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
@@ -167,7 +174,14 @@ export function About() {
 
                 {/* Commitments - updated */}
                 <motion.li
-                  onClick={() => setLinkActive(2)}
+                  onClick={() => {
+                    setLinkActive(2) 
+                    if (LinkActive === 2) {
+                      setLinkActive(null)
+                    } else {
+                      setLinkActive(2)
+                    }
+                  }}
                   initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
                   animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
                   transition={{ duration: 0.6, delay: 0.8, ease: "easeInOut" }}
@@ -182,7 +196,15 @@ export function About() {
 
                 {/* Vision - updated */}
                 <motion.li
-                  onClick={() => setLinkActive(3)}
+                  onClick={() => {
+                    setLinkActive(3) 
+                    if (LinkActive === 3) {
+                      setLinkActive(null)
+                    } else {
+                      setLinkActive(3)
+                    }
+                  }
+                   }
                   initial={{ scale: 0, filter: "blur(100px)", x: "-100%" }}
                   animate={{ scale: 1, filter: "blur(0px)", x: 0 }}
                   transition={{ duration: 0.7, delay: 0.9, ease: "easeInOut" }}
