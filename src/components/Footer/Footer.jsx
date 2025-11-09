@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export function Footer() {
+  const [LinkActive, setLinkActive] = useState(null)
   const handleScrollToTop = ()=>{
     window.scrollTo({
       top: 0,
@@ -23,21 +24,59 @@ export function Footer() {
             <motion.li className='mb-2 font-bold text-lg'>
              <p >Products</p>
             </motion.li>
-            <motion.li className='font-bold '>
-              <Link onClick={()=>handleScrollToTop()} to='/home'>Home</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 1 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 1) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(1)
+                }
+              }} to='/home'>Home</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/shop'>Shop</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 2 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 2) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(2)
+                }
+              }} to='/shop'>Shop</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/about'>About</Link>
+              <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 3 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 3) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(3)
+                }
+              }} to='/about'>About</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/contact'>Contact</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 4 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 4) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(4)
+                }
+              }} to='/contact'>Contact</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/blog'>Blog</Link>
-            </motion.li>
+           
 
 
 
@@ -47,22 +86,59 @@ export function Footer() {
             <motion.li className='mb-2 font-bold text-lg'>
              <p >Products</p>
             </motion.li>
-            <motion.li className='font-bold '>
-              <Link onClick={()=>handleScrollToTop()} to='/'>Home</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 5 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 5) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(5)
+                }
+              }} to='/'>Home</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/shop'>Shop</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 6 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 6) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(6)
+                }
+              }} to='/shop'>Shop</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/about'>About</Link>
+              <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 7 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 7) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(7)
+                }
+              }} to='/about'>About</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/contact'>Contact</Link>
+            <motion.li   className={`
+      text-[#503217] cursor-pointer 
+      transition-all duration-300 flex items-center justify-center gap-2
+      ${LinkActive === 8 ? `px-5 mx-4 scale-125 bg-[#E8E6DE] shadow-lg shadow-black/40 rounded-3xl  animate-pulse` : null}  `}>
+              <Link onClick={()=>{
+                handleScrollToTop() 
+                if (LinkActive === 8) {
+                  setLinkActive(null)
+                } else {
+                  setLinkActive(8)
+                }
+              }} to='/contact'>Contact</Link>
             </motion.li>
-            <motion.li>
-              <Link onClick={()=>handleScrollToTop()} to='/blog'>Blog</Link>
-            </motion.li>
-
+        
 
 
 
@@ -107,8 +183,8 @@ export function Footer() {
           </div>
           <div className="text-center text-gray-500/70 text-sm">
             <h4 className='text-lg font-bold text-left mb-2'>contact</h4>
-            <p className='text-left'>Phone:(123)456-7890</p>
-            <p className='text-left'>Email:info@yourwedsite</p>
+            <p className='text-left'>Phone:0127295817</p>
+            <p className='text-left'>Email:kareemmohamedali330@gmail.com</p>
 
           </div>
 
