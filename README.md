@@ -42,6 +42,10 @@
 ### ✨ [Visit Live Demo](https://medifit-three.vercel.app/) ✨
 
 </div>
+<img width="1706" height="819" alt="midfit-cover" src="https://github.com/user-attachments/assets/c067ed9c-e206-4536-b520-3b69c5c97a3c" />
+
+
+
 
 **Medifit** is a modern, full-featured e-commerce platform designed specifically for medical products and healthcare supplies. Built with React and powered by cutting-edge web technologies, Medifit provides a seamless shopping experience with an intuitive interface and smooth animations.
 
